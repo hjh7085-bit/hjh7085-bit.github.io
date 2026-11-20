@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ko" data-theme="light" data-updown="kr">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>마켓펄스 | 코스피·나스닥·비트코인 실시간 차트 워크스테이션</title>
+<meta name="description" content="코스피·코스닥·나스닥·S&P500 지수와 국내·미국 인기 종목, 비트코인 실시간 시세를 한 화면에서. 한국식 색상 캔들 차트에 11개 타임프레임, 보조지표(MA·볼린저·RSI·MACD·거래량), 추세선·피보나치 등 그리기 도구까지 무료로.">
+<meta name="keywords" content="주식 차트, 코스피, 코스닥, 나스닥, 비트코인, 업비트, 실시간 시세, 보조지표, 추세선, 관심종목, 증시 뉴스, DART 공시">
+<meta name="author" content="마켓펄스 (Market Pulse)">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#F4F6F9">
+<link rel="canonical" href="https://hjh7085-bit.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="마켓펄스">
+<meta property="og:title" content="마켓펄스 | 코스피·나스닥·비트코인 차트 워크스테이션">
+<meta property="og:description" content="11개 타임프레임·보조지표·그리기 도구를 갖춘 무료 시세 차트 워크스테이션.">
+<meta property="og:url" content="https://hjh7085-bit.github.io/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://hjh7085-bit.github.io/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://api.upbit.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261114u">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"마켓펄스","alternateName":"Market Pulse","url":"https://hjh7085-bit.github.io/","inLanguage":"ko-KR","description":"국내주식·미국주식·코인 통합 실시간 시세 차트 워크스테이션"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#workspace">차트로 바로가기</a>
+
+<!-- ===================== 상단 바 ===================== -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="./" aria-label="마켓펄스 홈">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="8" fill="url(#bg)"/>
+        <path d="M6 21.5l5.2-6.4 4.3 3.9 4.6-7.4 4.9 5.1" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="25" cy="16.7" r="2.1" fill="#2563EB"/>
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAF0FB"/><stop offset="1" stop-color="#DCE6F7"/></linearGradient></defs>
+      </svg>
+      <span class="brand-text">마켓<span class="brand-accent">펄스</span></span>
+      <span class="brand-sub">무료</span>
+    </a>
+
+    <form class="search" id="symbolForm" autocomplete="off" role="search">
+      <input id="symbolInput" type="search" placeholder="종목·코인 통합 검색 (삼성전자, NVDA, BTC)" aria-label="종목 검색" enterkeyhint="search">
+      <ul class="suggest" id="suggestList" hidden></ul>
+    </form>
+
+    <div class="top-actions">
+      <span class="conn-state" id="connState" title="시세 연결 상태"><span class="dot"></span>실시간</span>
+      <span class="clock" id="clock">—</span>
+      <button class="icon-btn tv-btn" id="tvBtn" type="button" title="실시간 TV 뉴스" aria-label="실시간 TV 뉴스" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6.5" width="19" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 3l4 3.5L16 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10.5l4.5 2.6-4.5 2.6z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" id="panelToggle" type="button" title="우측 패널 접기/펼치기" aria-label="우측 패널 접기">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M15 4v16" stroke="currentColor" stroke-width="1.7"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="다크/라이트 전환" title="다크/라이트 전환">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></g></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.4A8.6 8.6 0 1 1 9.6 4a7 7 0 0 0 10.4 10.4z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== 지수 요약 바 ===================== -->
+<section class="indexbar" aria-label="주요 지수">
+  <div class="wrap indexbar-in">
+    <div class="index-items" id="indexBar"></div>
+    <div class="index-foot">
+      <span class="market-state"><span class="dot" id="dot-kr"></span><span id="st-kr">국내 확인 중</span></span>
+      <span class="market-state"><span class="dot" id="dot-us"></span><span id="st-us">미국 확인 중</span></span>
+      <span class="index-time" id="indexUpdated">불러오는 중…</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 워크스페이스 ===================== -->
+<main class="workspace" id="workspace">
+
+  <!-- 좌측 세로 툴바 -->
+  <aside class="tools" id="tools" aria-label="차트 도구">
+    <button class="tool is-active" data-tool="cross" title="십자선 / 선택" aria-label="십자선">
+      <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <button class="tool" data-tool="trend" title="추세선" aria-label="추세선">
+      <svg viewBox="0 0 24 24"><path d="M4 19L20 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="4" cy="19" r="2" fill="currentColor"/><circle cx="20" cy="5" r="2" fill="currentColor"/></svg>
+    </button>
+    <button class="tool" data-tool="hline" title="수평선(지지·저항)" aria-label="수평선">
+      <svg viewBox="0 0 24 24"><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+    </button>
+    <button class="tool" data-tool="vline" title="수직선" aria-label="수직선">
+      <svg viewBox="0 0 24 24"><path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+    </button>
+    <button class="tool" data-tool="fib" title="피보나치 되돌림" aria-label="피보나치">
+      <svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 6h18M3 10h18M3 13.5h18M3 16.5h18M3 19h18"/></g></svg>
+    </button>
+    <button class="tool" data-tool="rect" title="사각형(매물대)" aria-label="사각형">
+      <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+    <button class="tool" data-tool="text" title="텍스트 메모" aria-label="텍스트">
+      <svg viewBox="0 0 24 24"><path d="M5 6h14M12 6v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <button class="tool" data-tool="channel" title="평행 채널" aria-label="평행채널">
+      <svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 16L20 6"/><path d="M4 21L20 11"/></g></svg>
+    </button>
+    <button class="tool" data-tool="arrow" title="화살표 마커" aria-label="화살표">
+      <svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5 19L18 6"/><path d="M12 6h6v6"/></g></svg>
+    </button>
+    <button class="tool" data-tool="ruler" title="가격·등락률 측정" aria-label="측정자">
+      <svg viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 20L20 4"/><path d="M7 17l-2-2M11 13l-2-2M15 9l-2-2M19 5l-2-2"/></g></svg>
+    </button>
+    <span class="tool-sep"></span>
+    <button class="tool" id="undoBtn" title="되돌리기" aria-label="되돌리기">
+      <svg viewBox="0 0 24 24"><path d="M9 7L4 12l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12h10a5 5 0 0 1 0 10h-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </button>
+    <button class="tool" id="clearDraw" title="그리기 전체 삭제" aria-label="전체 삭제">
+      <svg viewBox="0 0 24 24"><path d="M5 7h14M9 7V5h6v2M7 7l1 13h8l1-13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </aside>
+
+  <!-- 중앙 차트 -->
+  <section class="chartcol" aria-label="차트">
+    <div class="charthead">
+      <div class="sym-block">
+        <div class="sym-line">
+          <h2 id="shName">비트코인</h2>
+          <span class="badge" id="shMarket">코인</span>
+          <span class="sym-code" id="shCode">UPBIT:BTCKRW</span>
+        </div>
+        <div class="price-line">
+          <span class="price" id="shPrice">—</span>
+          <span class="chg" id="shChg">—</span>
+          <span class="sign-badge neutral" id="shSign" title="AI 종목 판단 사인">중립</span>
+          <span class="theme-tags" id="shThemes"></span>
+          <button class="star-btn" id="shWatch" type="button" title="관심종목 담기">★</button>
+        </div>
+      </div>
+
+      <div class="tfbar" id="tfbar" role="toolbar" aria-label="타임프레임">
+        <button class="tf" data-tf="1">1분</button>
+        <button class="tf" data-tf="3">3분</button>
+        <button class="tf" data-tf="5">5분</button>
+        <button class="tf" data-tf="10">10분</button>
+        <button class="tf" data-tf="15">15분</button>
+        <button class="tf" data-tf="30">30분</button>
+        <button class="tf" data-tf="60">1시간</button>
+        <button class="tf" data-tf="240">4시간</button>
+        <button class="tf is-active" data-tf="D">일봉</button>
+        <button class="tf" data-tf="W">주봉</button>
+        <button class="tf" data-tf="M">월봉</button>
+      </div>
+    </div>
+
+    <div class="indbar" id="indbar" role="toolbar" aria-label="보조지표와 화면">
+      <span class="ind-label">지표</span>
+      <button class="chip is-active" data-ind="ma5">MA5</button>
+      <button class="chip" data-ind="ma10">MA10</button>
+      <button class="chip is-active" data-ind="ma20">MA20</button>
+      <button class="chip is-active" data-ind="ma60">MA60</button>
+      <button class="chip" data-ind="ma120">MA120</button>
+      <button class="chip" data-ind="ema">EMA</button>
+      <button class="chip" data-ind="bb">볼린저</button>
+      <button class="chip" data-ind="ichi">일목</button>
+      <button class="chip is-active" data-ind="vol">거래량</button>
+      <button class="chip" data-ind="rsi">RSI</button>
+      <button class="chip" data-ind="macd">MACD</button>
+      <button class="chip" data-ind="stoch">스토캐스틱</button>
+      <button class="chip" data-ind="atr">ATR</button>
+      <span class="ind-sep"></span>
+      <button class="btn-mini" id="zoomIn" type="button" title="확대">+ 확대</button>
+      <button class="btn-mini" id="zoomOut" type="button" title="축소">− 축소</button>
+      <button class="btn-mini" id="zoomFit" type="button" title="전체 맞춤">맞춤</button>
+      <button class="btn-mini" id="wideBtn" type="button" title="패널을 접고 차트를 넓게">넓게 보기</button>
+    </div>
+
+    <div class="chartwrap" id="chartWrap">
+      <div class="chartmain" id="chartMain">
+        <div id="mainChart" class="lwc"></div>
+        <canvas id="drawLayer" class="drawlayer"></canvas>
+        <div class="loadmask" id="loadMask"><span></span>데이터 불러오는 중…</div>
+      </div>
+      <div class="subchart" id="rsiWrap" hidden>
+        <span class="sub-label">RSI(14)</span>
+        <div id="rsiChart" class="lwc"></div>
+      </div>
+      <div class="subchart" id="macdWrap" hidden>
+        <span class="sub-label">MACD(12,26,9)</span>
+        <div id="macdChart" class="lwc"></div>
+      </div>
+      <div class="subchart" id="stochWrap" hidden>
+        <span class="sub-label">Stochastic(14,3,3)</span>
+        <div id="stochChart" class="lwc"></div>
+      </div>
+      <div class="subchart" id="atrWrap" hidden>
+        <span class="sub-label">ATR(14)</span>
+        <div id="atrChart" class="lwc"></div>
+      </div>
+    </div>
+
+    <!-- 전략 · AI 분석 · 시나리오 -->
+    <div class="analytics" id="analytics">
+      <section class="an-card">
+        <div class="an-head">
+          <h3>📈 매매전략</h3>
+          <select id="stratSelect" aria-label="매매전략 선택">
+            <option value="ma">① 이평선 골든/데드크로스</option>
+            <option value="rsi">② RSI 과매도/과매수</option>
+            <option value="bb">③ 볼린저 하단 반등</option>
+            <option value="pull">④ 정배열 눌림목 스윙</option>
+          </select>
+        </div>
+        <div class="an-metrics" id="stratMetrics">
+          <div class="m"><span>승률</span><b>—</b></div>
+          <div class="m"><span>누적 수익률</span><b>—</b></div>
+          <div class="m"><span>거래/신호</span><b>—</b></div>
+          <div class="m"><span>최대 낙폭</span><b>—</b></div>
+        </div>
+        <div class="an-signal" id="stratSignal"><span class="badge-sig none">대기</span>차트 데이터를 불러오는 중…</div>
+        <div class="an-guide" id="stratGuide"><p class="g-note">전략을 선택하면 차트에 매수·매도 마커와 백테스트 지표가 표시됩니다.</p></div>
+        <ul class="an-trades" id="stratTrades"></ul>
+      </section>
+
+      <section class="an-card">
+        <div class="an-head">
+          <h3>🤖 AI 종목 판단</h3>
+          <span class="score-badge flat" id="aiBadge">—</span>
+        </div>
+        <div class="ai-top">
+          <div class="ai-sign neutral" id="aiSign">
+            <span class="ai-sign-ico">■</span><span class="ai-sign-txt">중립</span>
+          </div>
+          <div class="an-score">
+            <div class="score-bar" id="aiBar" role="img" aria-label="AI 종합 점수 게이지"><span id="aiNeedle"></span></div>
+            <b id="aiScore">—</b>
+          </div>
+        </div>
+        <div class="an-ind" id="aiInd"></div>
+        <ul class="an-reasons" id="aiReasons"></ul>
+        <div class="an-sr-line" id="aiSR"></div>
+        <ul class="an-risk" id="aiRisk"></ul>
+        <p class="an-fine" id="aiFine">정량·기술적 지표 기반 자동 분석이며, 심층 거시·펀더멘털 해석은 별도 AI 분석 연동 시 확장 가능합니다.</p>
+      </section>
+
+      <section class="an-card">
+        <div class="an-head">
+          <h3>🔭 예상 시나리오</h3>
+          <span class="an-sub" id="scenHorizon">—</span>
+        </div>
+        <ul class="an-scen" id="scenList">
+          <li class="scen-bull"><b>강세</b><span>데이터 대기 중</span></li>
+        </ul>
+        <p class="scen-legend">
+          <span class="lg-bull"><i></i>강세 경로</span>
+          <span class="lg-flat"><i></i>중립(박스) 경로</span>
+          <span class="lg-bear"><i></i>약세 경로</span>
+        </p>
+        <p class="an-fine">지지·저항·ATR(14) 기반 단순 시나리오이며 확정 예측이 아닙니다.</p>
+      </section>
+    </div>
+
+
+    <p class="chartnote" id="chartNote">마우스 휠로 확대·축소, 드래그로 이동, 좌측 도구로 추세선·지지선·피보나치를 그릴 수 있습니다.</p>
+  </section>
+
+  <!-- 우측 사이드 패널 -->
+  <aside class="sidepanel" id="sidePanel" aria-label="시세 목록과 정보">
+    <div class="market-tabs" id="marketTabs" role="tablist">
+      <button class="mtab is-active" role="tab" data-tab="watch" aria-selected="true">관심</button>
+      <button class="mtab" role="tab" data-tab="kr" aria-selected="false">국내</button>
+      <button class="mtab" role="tab" data-tab="us" aria-selected="false">미국</button>
+      <button class="mtab" role="tab" data-tab="crypto" aria-selected="false">코인</button>
+    </div>
+    <div class="theme-filter" id="themeFilter" aria-label="테마 필터"></div>
+    <div class="list-head"><span id="listTitle">내 관심종목</span><span id="listSort">내가 담은 순</span></div>
+    <div class="rows" id="rows">
+      <div class="row-skel"></div><div class="row-skel"></div><div class="row-skel"></div><div class="row-skel"></div>
+    </div>
+    <div class="quick-add" id="quickAdd">
+      <span class="quick-label">빠른 추가</span>
+      <button type="button" data-sym="KRX:005930">삼성전자</button>
+      <button type="button" data-sym="KRX:000660">SK하이닉스</button>
+      <button type="button" data-sym="NASDAQ:NVDA">엔비디아</button>
+      <button type="button" data-sym="UPBIT:BTCKRW">비트코인</button>
+    </div>
+
+    <div class="panel-tabs" id="infoTabs" role="tablist">
+      <button class="ptab is-active" role="tab" data-pane="news">뉴스</button>
+      <button class="ptab" role="tab" data-pane="disc">공시·리서치</button>
+      <button class="ptab" role="tab" data-pane="memo">메모</button>
+    </div>
+    <div class="panel-body">
+      <div class="pane is-active" data-pane="news">
+        <div class="news-tabs" id="newsTabs">
+          <button class="news-tab is-active" data-market="all">전체</button>
+          <button class="news-tab" data-market="kr">국내</button>
+          <button class="news-tab" data-market="us">미국</button>
+          <button class="news-tab" data-market="crypto">코인</button>
+        </div>
+        <div class="news-list" id="newsList"><div class="news-skel"></div><div class="news-skel"></div><div class="news-skel"></div></div>
+      </div>
+      <div class="pane" data-pane="disc">
+        <div class="link-list" id="linkList"></div>
+      </div>
+      <div class="pane" data-pane="memo">
+        <p class="memo-help">이 종목의 매수 이유·목표가를 적어두세요. 브라우저에만 저장됩니다.</p>
+        <textarea id="memoBox" class="memo-box" placeholder="예) 3분기 실적 발표 후 20만원 이하 분할 매수"></textarea>
+        <div class="memo-actions">
+          <button class="btn btn-primary" id="memoSave" type="button">메모 저장</button>
+          <button class="btn btn-ghost" id="memoDel" type="button">삭제</button>
+        </div>
+        <div class="watch-tools">
+          <button class="btn btn-ghost" id="watchExport" type="button">관심종목 내보내기</button>
+          <button class="btn btn-ghost" id="watchClear" type="button">전체 삭제</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<!-- ===================== 실시간 TV 뉴스 ===================== -->
+<aside class="tv-panel" id="tvPanel" hidden aria-label="실시간 TV 뉴스">
+  <div class="tv-head">
+    <b>📺 실시간 TV 뉴스</b>
+    <div class="tv-tabs" id="tvTabs" role="tablist">
+      <button type="button" class="tv-tab is-active" data-market="kr" role="tab">국내</button>
+      <button type="button" class="tv-tab" data-market="us" role="tab">미국</button>
+    </div>
+    <button type="button" class="tv-close" id="tvClose" aria-label="TV 뉴스 닫기">✕</button>
+  </div>
+  <div class="tv-frame" id="tvFrame"></div>
+  <div class="tv-chips" id="tvChips"></div>
+  <div class="tv-foot" id="tvNote"></div>
+</aside>
+
+<div class="ad-slot ad-bottom" id="ad-slot-bottom" data-ad="bottom" aria-hidden="true"><span class="ad-note">AD</span></div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-text">마켓<span class="brand-accent">펄스</span></span>
+        <p>국내·미국·코인을 한 화면에서 보는 무료 차트 워크스테이션.</p>
+      </div>
+      <nav class="footer-nav" aria-label="바로가기">
+        <a href="#workspace">차트</a><a href="./privacy.html">개인정보 처리방침</a><a href="./sitemap.xml">사이트맵</a>
+      </nav>
+    </div>
+    <div class="disclaimer">
+      <b>투자 유의사항</b>
+      <p>본 사이트의 시세·차트·뉴스는 정보 제공 목적의 참고 자료이며 투자 권유나 매매 신호가 아닙니다. 국내·미국 주식 시세는 약 15~20분 지연될 수 있고, 코인은 업비트 공개 API 실시간 데이터입니다. 데이터의 지연·누락·오류로 인한 투자 판단과 그 결과에 대한 책임은 투자자 본인에게 있습니다.</p>
+      <p>본 사이트는 업비트·한국거래소·증권사·언론사와 제휴 관계가 없는 비공식 정보 페이지입니다.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 마켓펄스 · 개인 프로젝트</span>
+      <span class="footer-links">차트 엔진: TradingView Lightweight Charts (Apache-2.0)</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js"></script>
+<script src="assets/js/app.js?v=20261114u" defer></script>
+<script src="assets/js/quotes.js?v=20261114u" defer></script>
+<script src="assets/js/coin.js?v=20261114u" defer></script>
+<script src="assets/js/terminal.js?v=20261114u" defer></script>
+<script src="assets/js/news.js?v=20261114u" defer></script>
+<script src="assets/js/watchlist.js?v=20261114u" defer></script>
+<script src="assets/js/tv.js?v=20261114u" defer></script>
+</body>
+</html>

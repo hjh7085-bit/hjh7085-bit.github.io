@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>주식 수수료·거래세·실현손익 계산기 | 팩트체크 건강연구소</title>
+<meta name="description" content="매수·매도 단가와 수량, 수수료율, 시장(코스피·코스닥·미국)을 넣으면 수수료와 거래세를 반영한 실현손익과 수익률, 손익분기 매도가를 계산합니다. 세후 실제로 남는 금액을 확인하세요.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="팩트체크 건강연구소 Denny">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/favicon.svg">
+<link rel="canonical" href="https://hjh7085-bit.github.io/stock-fees/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/stock-fees/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="주식 수수료·거래세·실현손익 계산기">
+<meta property="og:description" content="매수 1만원 100주 → 1만1천원 매도. 수수료 0.015%와 거래세 0.15%를 떼면 실제 수익은?">
+<meta property="og:image" content="https://hjh7085-bit.github.io/assets/og-cover.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="주식 수수료·거래세·실현손익 계산기">
+<meta name="twitter:description" content="매수 1만원 100주 → 1만1천원 매도. 수수료 0.015%와 거래세 0.15%를 떼면 실제 수익은?">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/assets/og-cover.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/tool.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "주식 수수료·거래세·실현손익 계산기",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "url": "https://hjh7085-bit.github.io/stock-fees/",
+      "description": "매수·매도 단가와 수량, 수수료율, 시장(코스피·코스닥·미국)을 넣으면 수수료와 거래세를 반영한 실현손익과 수익률, 손익분기 매도가를 계산합니다. 세후 실제로 남는 금액을 확인하세요.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "팩트체크 건강연구소"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "주식 수수료와 거래세는 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "온라인 위탁수수료는 0.015% 내외(양방향)이고, 증권거래세는 2026년 코스피·코스닥 모두 매도금액의 0.15%입니다. 1,000만원 매도 시 수수료 1,500원 + 거래세 15,000원이 나갑니다. 최소수수료가 있는 증권사는 소액 거래에서 비율이 훨씬 높아집니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "1% 수익이면 본전인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아닙니다. 매수·매도 수수료 0.03%와 거래세 0.15%를 합치면 약 0.18%가 비용이라, 0.18% 이상 올라야 본전입니다. 1% 수익이면 비용을 빼고 0.82%가 남습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "미국 주식은 세금이 없나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "거래세는 없지만 양도소득세가 있습니다. 연간 양도차익 250만원을 공제하고 초과분에 22%(지방세 포함)를 과세합니다. 다음 해 5월에 신고해야 하며, 손실 종목과 통산할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "손익분기 매도가는 어떻게 계산하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "매수단가 × (1+수수료율) ÷ (1−수수료율−거래세율)입니다. 매수 1만원·수수료 0.015%·거래세 0.15%면 약 1만 16원입니다. 이 가격 아래에 팔면 비용 때문에 손실입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "최소수수료가 있으면 계산이 달라지나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 1,000원 최소수수료가 있는 증권사에서 10만원어치를 사면 수수료율이 1%가 됩니다. 소액 거래가 잦다면 수수료 체계를 확인하고, 이 계산기의 수수료율에 실제 적용률을 넣으세요."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "웹툴 60종",
+          "item": "https://hjh7085-bit.github.io/link/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "주식 수수료·거래세·실현손익 계산기",
+          "item": "https://hjh7085-bit.github.io/stock-fees/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-bar" data-tool="stock">
+<a class="skip-link" href="#tool">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="../link/" aria-label="팩트체크 건강연구소 링크 허브">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5c3.6 4 6.2 7 6.2 10.2A6.2 6.2 0 0 1 5.8 13.7C5.8 10.5 8.4 7.5 12 3.5Z"/>
+          <path d="M9.6 14.4c.2 1.4 1.1 2.3 2.4 2.5"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>팩트체크 건강연구소</strong>
+        <small>Free Web Tools</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#tool">계산하기</a>
+      <a href="#guide">원리·사용법</a>
+      <a href="#faq">FAQ</a>
+      <a href="../link/">웹툴 60종</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>웹툴 45호 · 주식·투자</p>
+      <h1 class="hero__title">수수료·거래세 떼고<br><em>실현손익</em>은 얼마?</h1>
+      <p class="hero__sub">매도 차익에서 <b>수수료(양방향)</b>와 <b>거래세</b>가 빠집니다. 1% 올랐어도 비용 때문에 손해일 수 있으니, 세후 실현손익과 <b>손익분기 매도가</b>를 확인하세요.</p>
+      <ul class="hero__legend" aria-label="표시 안내">
+        <li><span class="chip chip--green">🟢 실현손익</span> 비용 차감 후</li><li><span class="chip chip--amber">🟡 거래세</span> 매도 시 부과</li><li><span class="chip chip--red">🔴 손익분기</span> 이 가격 아래면 손실</li>
+      </ul>
+
+      <div class="hero__stats">
+        <div><strong>양방향</strong><span>수수료</span></div>
+        <div><strong>0.15%</strong><span>코스피·코스닥</span></div>
+        <div><strong>미국</strong><span>거래세 0%</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="notice">
+    <div class="container notice__inner">
+      <span class="notice__icon" aria-hidden="true">🧾</span>
+      <p>2026년 기준 국내 증권거래세는 코스피·코스닥 모두 매도금액의 <b>0.15%</b>(코스피는 농어촌특별세)입니다. 미국 주식은 거래세가 없고 양도소득세(연 250만원 공제, 22%)가 별도로 붙습니다. 수수료율은 증권사별로 다릅니다.</p>
+    </div>
+  </section>
+  <section class="section" id="tool">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 1</p>
+        <h2 class="section__title">매수·매도 내역을 넣으세요</h2>
+        <p class="section__desc">수량을 일부만 팔았다면 매도 수량을 따로 넣으세요.</p>
+      </div>
+
+      <div class="form-stack">
+<div class="fcard"><div class="fcard__head"><span class="fcard__icon" aria-hidden="true">🛒</span><h3 class="fcard__title">매수</h3><span class="fcard__note">체결 기준</span></div><div class="fgrid"><label class="field" for="buyPrice"><span class="field__label">매수 단가</span><span class="input-wrap"><input class="input" id="buyPrice" type="number" inputmode="decimal" step="1" placeholder="예: 10000" autocomplete="off"><span class="input__unit">원</span></span></label><label class="field" for="buyQty"><span class="field__label">매수 수량</span><span class="input-wrap"><input class="input" id="buyQty" type="number" inputmode="decimal" step="1" placeholder="예: 100" autocomplete="off"><span class="input__unit">주</span></span></label></div></div>
+<div class="fcard"><div class="fcard__head"><span class="fcard__icon" aria-hidden="true">💵</span><h3 class="fcard__title">매도</h3><span class="fcard__note">체결 기준</span></div><div class="fgrid"><label class="field" for="sellPrice"><span class="field__label">매도 단가</span><span class="input-wrap"><input class="input" id="sellPrice" type="number" inputmode="decimal" step="1" placeholder="예: 11000" autocomplete="off"><span class="input__unit">원</span></span></label><label class="field" for="sellQty"><span class="field__label">매도 수량</span><span class="input-wrap"><input class="input" id="sellQty" type="number" inputmode="decimal" step="1" placeholder="예: 100" autocomplete="off"><span class="input__unit">주</span></span><span class="field__hint">보유 수량 이하</span></label><div class="field field--full" data-seg-group="market"><span class="field__label">시장</span><br><div class="seg seg--wrap" role="group" aria-label="시장"><button class="seg__btn is-on" type="button" data-seg="market" data-val="kospi" aria-pressed="true">코스피 0.15%</button><button class="seg__btn" type="button" data-seg="market" data-val="kosdaq" aria-pressed="false">코스닥 0.15%</button><button class="seg__btn" type="button" data-seg="market" data-val="us" aria-pressed="false">미국 0%</button></div></div><label class="field" for="feeRate"><span class="field__label">수수료율</span><span class="input-wrap"><input class="input" id="feeRate" type="number" inputmode="decimal" step="0.001" value="0.015" placeholder="예: 0.015" autocomplete="off"><span class="input__unit">%</span></span><span class="field__hint">증권사별 · 온라인 0.015% 내외</span></label><label class="field" for="fx"><span class="field__label">환율 (미국만)</span><span class="input-wrap"><input class="input" id="fx" type="number" inputmode="decimal" step="1" value="1350" placeholder="예: 1350" autocomplete="off"><span class="input__unit">원</span></span><span class="field__hint">미국 주식일 때 적용</span></label></div></div>
+      </div>
+      <div class="presets" style="margin:16px 0 0">
+        <span class="presets__label">예시로 보기</span>
+        <button class="preset" type="button" data-preset="1만 → 1.1만 · 100주">1만 → 1.1만 · 100주</button><button class="preset" type="button" data-preset="5만 → 4.8만 · 200주 (손실)">5만 → 4.8만 · 200주 (손실)</button><button class="preset" type="button" data-preset="미국 150달러 → 165달러">미국 150달러 → 165달러</button>
+      </div>
+
+      <div class="actionbar is-on">
+        <div class="container actionbar__inner">
+          <div class="actionbar__count">
+            <span id="countText">매수·매도 가격과 수량을 넣으세요</span>
+            <span class="actionbar__hint" id="countHint">수수료율 기본 0.015%</span>
+          </div>
+          <div class="actionbar__btns">
+            <button class="btn btn--ghost" type="button" id="resetBtn">초기화</button>
+            <button class="btn btn--primary" type="button" id="analyzeBtn" aria-controls="result">
+              <span>손익 계산하기</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="noscript">이 계산기는 자바스크립트로 동작해요. 브라우저에서 자바스크립트를 켜주세요.</p>
+      </noscript>
+    </div>
+  </section>
+  <section class="section section--result" id="result" hidden>
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 2</p>
+        <h2 class="section__title">세후 실현손익</h2>
+        <p class="section__desc" id="resultSub">수수료와 거래세를 모두 반영한 값입니다.</p>
+      </div>
+
+      <div id="out" aria-live="polite"></div>
+
+      <div class="result-foot">
+        <button class="btn btn--ghost" type="button" id="copyBtn">결과 복사</button>
+        <button class="btn btn--ghost" type="button" id="editBtn">수치 다시 넣기</button>
+      </div>
+
+      <div class="note-box">수수료율·최소수수료(보통 1,000~2,000원)·유관기관 수수료는 증권사마다 다릅니다. 미국 주식의 양도소득세(연 250만원 초과분 22%)와 배당 원천징수는 반영하지 않았습니다. 실제 정산 금액은 증권사 거래내역을 확인하세요.</div>
+    </div>
+  </section>
+  <section class="section" id="guide">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">GUIDE</p>
+        <h2 class="section__title">거래비용, 얼마나 떼가나</h2>
+        <p class="section__desc">수수료·거래세·양도소득세의 구조와 계산법.</p>
+      </div>
+      <div class="guide">
+<div class="gcard"><h3 class="gcard__title"><span>01</span> 국내 주식 — 수수료 + 거래세</h3><div class="gcard__body"><p>주식을 사고팔 때 드는 비용은 두 가지입니다.</p>
+<ul><li><b>위탁수수료</b>: 증권사에 내는 수수료. 온라인 0.015% 내외, 오프라인·소액은 최소수수료(1,000~2,000원)가 붙습니다. 매수·매도 양쪽에 부과됩니다.</li>
+<li><b>증권거래세</b>: 매도할 때만 부과. 2026년 코스피·코스닥 모두 0.15%입니다.</li></ul>
+<span class="formula">세후 손익 = 매도금액 − 매도수수료 − 거래세 − (매수금액 + 매수수수료)<br>
+손익분기 매도가 ≈ 매수단가 × (1+수수료율) ÷ (1 − 수수료율 − 거래세율)</span>
+<p>1만원에 사서 1만 1,000원에 팔면 세전 차익은 100만원(1,000주)이지만, 수수료·거래세 약 33만원이 빠져 실수익은 97만원 수준입니다.</p></div></div>
+<div class="gcard"><h3 class="gcard__title"><span>02</span> 미국 주식 — 거래세 0%, 대신 양도소득세</h3><div class="gcard__body"><p>미국 주식은 증권거래세가 없습니다. 대신 <b>양도소득세</b>가 붙습니다.</p>
+<ul><li>연간 양도차익에서 <b>250만원을 공제</b>하고, 초과분에 20% + 지방소득세 2% = <b>22%</b>를 과세합니다.</li>
+<li>손실이 난 종목과 이익 종목을 합산해 신고합니다(손익통산).</li>
+<li>다음 해 5월에 홈택스를 통해 신고하며, 증권사가 대행하는 경우도 있습니다.</li></ul>
+<p>환율 변동도 수익률에 영향을 줍니다. 달러로 벌어도 원화 가치가 떨어지면 원화 수익은 줄어듭니다. 이 계산기의 '환율' 칸에 실제 환전 환율을 넣으세요.</p></div></div>
+<div class="gcard"><h3 class="gcard__title"><span>03</span> 손익분기 매도가가 중요한 이유</h3><div class="gcard__body"><p>"1% 오르면 팔아야지"라고 생각해도, 실제로는 수수료·세금 때문에 1%로는 본전이 안 됩니다.</p>
+<p>매수 1만원, 수수료 0.015%, 거래세 0.15%라면 손익분기 매도가는 약 <b>1만 16원</b>입니다. 0.16%가 넘게 올라야 본전입니다. 이 계산기의 '손익분기 매도가'가 그 값입니다.</p>
+<p>단타를 자주 할수록 이 0.16%가 누적됩니다. 하루 1회 왕복 매매를 250일 하면 약 40%의 비용이 발생하는 셈입니다.</p></div></div>
+<div class="gcard"><h3 class="gcard__title"><span>04</span> 세금을 줄이는 합법적 방법</h3><div class="gcard__body"><ul><li><b>장기보유</b>: 국내 주식은 양도소득세가 없어(대주주 제외) 오래 보유할수록 유리합니다.</li>
+<li><b>손익통산</b>: 미국 주식은 손실을 이익과 합산해 과세표준을 낮출 수 있습니다. 연말에 손실 종목을 정리하는 이유입니다.</li>
+<li><b>ISA·연금저축</b>: ISA는 200만원(서민형 400만원)까지 비과세, 연금저축은 세액공제와 과세이연이 됩니다.</li>
+<li><b>배당소득 2,000만원</b>: 금융소득 종합과세 기준을 넘으면 세율이 크게 올라, 분산 투자가 유리합니다.</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">FAQ</p>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>주식 수수료와 거래세는 얼마인가요?</summary>
+          <p>온라인 위탁수수료는 0.015% 내외(양방향)이고, 증권거래세는 2026년 코스피·코스닥 모두 매도금액의 0.15%입니다. 1,000만원 매도 시 수수료 1,500원 + 거래세 15,000원이 나갑니다. 최소수수료가 있는 증권사는 소액 거래에서 비율이 훨씬 높아집니다.</p>
+        </details>
+        <details>
+          <summary>1% 수익이면 본전인가요?</summary>
+          <p>아닙니다. 매수·매도 수수료 0.03%와 거래세 0.15%를 합치면 약 0.18%가 비용이라, 0.18% 이상 올라야 본전입니다. 1% 수익이면 비용을 빼고 0.82%가 남습니다.</p>
+        </details>
+        <details>
+          <summary>미국 주식은 세금이 없나요?</summary>
+          <p>거래세는 없지만 양도소득세가 있습니다. 연간 양도차익 250만원을 공제하고 초과분에 22%(지방세 포함)를 과세합니다. 다음 해 5월에 신고해야 하며, 손실 종목과 통산할 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>손익분기 매도가는 어떻게 계산하나요?</summary>
+          <p>매수단가 × (1+수수료율) ÷ (1−수수료율−거래세율)입니다. 매수 1만원·수수료 0.015%·거래세 0.15%면 약 1만 16원입니다. 이 가격 아래에 팔면 비용 때문에 손실입니다.</p>
+        </details>
+        <details>
+          <summary>최소수수료가 있으면 계산이 달라지나요?</summary>
+          <p>네. 1,000원 최소수수료가 있는 증권사에서 10만원어치를 사면 수수료율이 1%가 됩니다. 소액 거래가 잦다면 수수료 체계를 확인하고, 이 계산기의 수수료율에 실제 적용률을 넣으세요.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="section section--related">
+    <div class="container">
+      <div class="block__head"><h3 class="block__title">🧰 함께 쓰면 좋은 웹툴</h3></div>
+      <div class="tool-links">
+<a class="tool-link" href="../avg-price/">
+            <span class="tool-link__icon" aria-hidden="true">📉</span>
+            <span class="tool-link__body"><span class="tool-link__num">웹툴</span><span class="tool-link__title">물타기 평단가 계산기</span><span class="tool-link__meta">추가매수 3차까지</span></span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="../scale-in-rr/">
+            <span class="tool-link__icon" aria-hidden="true">🎯</span>
+            <span class="tool-link__body"><span class="tool-link__num">웹툴</span><span class="tool-link__title">분할매수·손익비 계산기</span><span class="tool-link__meta">R:R·기대값</span></span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="../dividend-calc/">
+            <span class="tool-link__icon" aria-hidden="true">💵</span>
+            <span class="tool-link__body"><span class="tool-link__num">웹툴</span><span class="tool-link__title">배당금 시뮬레이터</span><span class="tool-link__meta">월별 배당·세후</span></span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <strong>팩트체크 건강연구소 · Denny</strong>
+      <p>논문과 공개 기준만으로 만든 무료 계산기·체크기 60종. 회원가입 없이 브라우저에서 바로 계산합니다.</p>
+    </div>
+    <div class="site-footer__meta">
+      <nav class="site-footer__links" aria-label="사이트 정보">
+        <a href="../link/">웹툴 60종</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+        <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">블로그</a>
+      </nav>
+      <p>© <span id="year">2026</span> Fact-check Health Lab · 무료 웹툴</p>
+      <p class="site-footer__notice">입력한 값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/toolkit.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

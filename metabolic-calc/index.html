@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>단식·운동 대사 정체기 정밀 진단기 — BMR·TDEE·단백질 처방 | 팩트체크 건강연구소</title>
+<meta name="description" content="하루 3시간 걷고 16시간 단식해도 체중이 안 빠진다면 과운동·적자 과다로 대사가 적응한 상태일 수 있습니다. 나이·키·체중·수면·단식·운동·투약 12개 항목으로 기초대사량(BMR)·총소비(TDEE)·적정 감량 칼로리·단백질/수분/전해질·운동 시간 조정안까지 계산합니다. 문헌 기반 참고용.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/metabolic-calc/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="단식·운동 대사 정체기 정밀 진단기">
+<meta property="og:description" content="과운동·고단식·수면 부족이 겹치면 몸이 소비를 줄입니다. BMR·TDEE·적정 감량 칼로리와 정체기 탈출 처방을 1분에.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/metabolic-calc/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="단식·운동 대사 정체기 정밀 진단기">
+<meta name="twitter:description" content="BMR·TDEE·적정 감량 칼로리·단백질 처방·운동 시간 조정안까지 1분 진단.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/metabolic-calc/assets/og-image.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "단식·운동 대사 정체기 정밀 진단기",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "description": "나이·키·체중·체지방률·걷기 시간·근력운동 횟수·수면·간헐적 단식·섭취 칼로리·단백질·비만약·정체 여부 12개 항목으로 기초대사량(BMR)과 총소비(TDEE), 적정 감량 칼로리, 단백질·수분·전해질 처방, 운동 시간 조정안을 계산하는 무료 웹툴.",
+      "publisher": { "@type": "Organization", "name": "팩트체크 건강연구소" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "하루 3시간씩 걷는데도 체중이 안 빠지는 이유가 뭔가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "운동량이 많으면 몸이 두 가지로 반응합니다. 첫째, 비운동성 활동량(NEAT)이 줄어 하루 총소비가 생각만큼 늘지 않습니다. 둘째, 적자와 수면 부족이 겹치면 코르티솔이 올라 수분을 붙잡고 식욕이 커집니다. 체중은 7일 평균으로 2주 이상 0.3kg도 줄지 않을 때 정체로 판단하고, 그때는 운동 시간을 45~60분으로 줄이고 적자를 10~15%로 낮추는 쪽이 더 빨리 움직입니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "16시간 단식은 계속 유지해야 하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "단식 자체가 감량을 만드는 게 아니라 하루 섭취를 줄이기 쉽게 만드는 도구입니다. 총 섭취와 단백질이 충분한데도 체중이 2주 이상 멈췄다면 단식 시간을 18~20시간으로 늘리기보다 12~14시간으로 줄이고 그만큼 단백질과 수면을 채우는 편이 대사 적응을 푸는 데 유리합니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "기초대사량보다 적게 먹으면 더 빨리 빠지지 않나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "단기적으로는 체중이 줄지만 근육 손실과 대사 적응이 함께 옵니다. Mifflin-St Jeor 기초대사량의 90% 미만으로 오래 먹으면 체중 감량 속도가 오히려 둔해지고, 중단 후 되돌아오는 체중이 늘어납니다. 최소한 기초대사량의 1.05배 또는 남성 1,500kcal·여성 1,200kcal 이상을 지키는 것이 권장됩니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "마운자로·위고비를 맞으면서 근손실은 어떻게 막나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "GLP-1 계열은 식사량이 줄어 단백질 섭취가 급감하기 쉬워 근손실 비율이 커집니다. 체중 1kg당 1.2~1.6g의 단백질을 끼니마다 25~40g씩 나눠 채우고, 주 2~3회 근력운동과 하루 1.5~2L 이상의 수분을 함께 가져가야 합니다. 어지럼·식은땀 같은 저혈당 증상이 있으면 처방 의사와 상담하세요." }
+        },
+        {
+          "@type": "Question",
+          "name": "이 진단 수치를 병원 진료에 그대로 써도 되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 이 계산은 공개된 공식(Mifflin-St Jeor, Katch-McArdle)과 문헌 권고를 정리한 추정치이며 의학적 진단이 아닙니다. 갑상선 질환·신장질환·당뇨약 복용 중이라면 실제 대사량이 크게 다를 수 있으므로 내과 전문의와 상담하세요." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-bar">
+<a class="skip-link" href="#checker">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="https://hjh7085-bit.github.io/link/" aria-label="팩트체크 건강연구소 링크 허브">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13.5 2.5c0 3 1.5 4 3 5.5 1.6 1.6 2.5 3.2 2.5 5.5A6.5 6.5 0 0 1 6 12c0-2.3 1-3.6 2.2-5M9 9.5c-1 1.2-1.6 2.2-1.6 3.6"/>
+          <path d="M12 22c3 0 5-2 5-4.6 0-2-1.4-3.4-2.6-4.6"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>팩트체크 건강연구소</strong>
+        <small>Fact-check Health Lab</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#checker">정밀 진단</a>
+      <a href="#columns">연구소 칼럼</a>
+      <a href="https://hjh7085-bit.github.io/glucose-lab/">혈당 체크기</a>
+      <a href="https://hjh7085-bit.github.io/factcheck-lab/">중복 체크기</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>팩트체크 건강연구소 · 웹툴 3호</p>
+      <h1 class="hero__title">단식·운동<br><em>대사 정체기</em> 정밀 진단</h1>
+      <p class="hero__sub">하루 3시간 걸어도, 16시간을 굶어도 체중이 멈췄다면 원인은 <b>노력이 부족</b>한 게 아니라 <b>적자 과다·과운동</b>일 수 있어요. 12개 항목을 넣으면 <b>기초대사량·총소비·적정 감량 칼로리·단백질 처방·운동 시간 조정안</b>까지 계산해 드립니다.</p>
+
+      <ul class="hero__legend" aria-label="진단 결과 표시 안내">
+        <li><span class="chip chip--red">🔴 과운동</span> 코르티솔·회복 경고</li>
+        <li><span class="chip chip--amber">🟡 적응</span> 적자 과다 주의</li>
+        <li><span class="chip chip--green">🟢 적정</span> 유지 가능한 페이스</li>
+      </ul>
+
+      <div class="hero__stats">
+        <div><strong>12개</strong><span>정밀 입력 항목</span></div>
+        <div><strong>1분</strong><span>진단 시간</span></div>
+        <div><strong>문헌</strong><span>공식·권고 기반</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="container notice__inner">
+      <span class="notice__icon" aria-hidden="true">⚕️</span>
+      <p><b>참고용 안내</b> — 이 진단은 공개된 대사 공식(Mifflin-St Jeor 1990, Katch-McArdle)과 스포츠영양·비만 문헌의 권고 범위를 정리한 <b>추정치</b>이며 의학적 진단이 아니에요. 갑상선·신장·간 질환이 있거나 당뇨약·비만약을 복용 중이라면 수치가 크게 달라질 수 있으니 담당 의사와 상담하세요.</p>
+    </div>
+  </section>
+
+  <section class="section" id="checker">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 1</p>
+        <h2 class="section__title">지금 상태를 <em>정확히</em> 넣어주세요</h2>
+        <p class="section__desc">대충 넣으면 결과도 대충 나옵니다. 체중은 아침 공복 기준, 운동 시간은 '하루 평균'으로 넣어 주세요.</p>
+      </div>
+
+      <div class="form-stack">
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🧍</span>
+            <h3 class="fcard__title">기본 스펙</h3>
+            <span class="fcard__note">필수</span>
+          </div>
+          <div class="fgrid">
+            <div class="field field--full">
+              <span class="field__label">성별</span>
+              <div class="seg seg--fill" id="sexSeg" role="group" aria-label="성별">
+                <button class="seg__btn is-on" type="button" data-val="male" aria-pressed="true">남성</button>
+                <button class="seg__btn" type="button" data-val="female" aria-pressed="false">여성</button>
+              </div>
+            </div>
+            <label class="field">
+              <span class="field__label">나이</span>
+              <span class="input-wrap">
+                <input class="input" id="age" type="number" inputmode="numeric" min="14" max="90" step="1" placeholder="예: 40" autocomplete="off">
+                <span class="input__unit">세</span>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">키</span>
+              <span class="input-wrap">
+                <input class="input" id="height" type="number" inputmode="decimal" min="120" max="220" step="0.1" placeholder="예: 175" autocomplete="off">
+                <span class="input__unit">cm</span>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">현재 체중</span>
+              <span class="input-wrap">
+                <input class="input" id="weight" type="number" inputmode="decimal" min="30" max="250" step="0.1" placeholder="예: 70.0" autocomplete="off">
+                <span class="input__unit">kg</span>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">목표 체중</span>
+              <span class="input-wrap">
+                <input class="input" id="target" type="number" inputmode="decimal" min="30" max="250" step="0.1" placeholder="예: 65.0" autocomplete="off">
+                <span class="input__unit">kg</span>
+              </span>
+            </label>
+            <label class="field field--full">
+              <span class="field__label">체지방률 <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="bodyfat" type="number" inputmode="decimal" min="3" max="65" step="0.1" placeholder="모르면 비워두세요 (인바디 기준)" autocomplete="off">
+                <span class="input__unit">%</span>
+              </span>
+              <span class="field__hint">넣으면 기초대사량을 제지방량 기준(Katch-McArdle)으로 더 정확하게 계산합니다.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🏃</span>
+            <h3 class="fcard__title">생활 · 운동</h3>
+            <span class="fcard__note">하루 평균 기준</span>
+          </div>
+          <div class="fgrid">
+            <div class="field field--full">
+              <span class="field__label">하루 걷기 · 유산소 시간</span>
+              <div class="slider">
+                <div class="slider__top">
+                  <span class="field__hint">등산·러닝도 포함해서 합계로 넣어주세요</span>
+                  <span class="slider__val" id="cardioVal">30<em>분</em></span>
+                </div>
+                <input class="range" id="cardio" type="range" min="0" max="240" step="5" value="30" aria-label="하루 걷기·유산소 시간(분)">
+                <span class="range__scale"><span>0</span><span>1시간</span><span>2시간</span><span>3시간</span><span>4시간</span></span>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">주간 근력운동 횟수</span>
+              <div class="seg seg--fill" id="strengthSeg" role="group" aria-label="주간 근력운동 횟수">
+                <button class="seg__btn is-on" type="button" data-val="0" aria-pressed="true">0회</button>
+                <button class="seg__btn" type="button" data-val="1" aria-pressed="false">1회</button>
+                <button class="seg__btn" type="button" data-val="2" aria-pressed="false">2회</button>
+                <button class="seg__btn" type="button" data-val="3" aria-pressed="false">3회</button>
+                <button class="seg__btn" type="button" data-val="4" aria-pressed="false">4회</button>
+                <button class="seg__btn" type="button" data-val="5" aria-pressed="false">5회+</button>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">하루 수면 시간</span>
+              <div class="slider">
+                <div class="slider__top">
+                  <span class="field__hint">실제로 잠든 시간 기준</span>
+                  <span class="slider__val" id="sleepVal">7<em>시간</em></span>
+                </div>
+                <input class="range" id="sleep" type="range" min="4" max="10" step="0.5" value="7" aria-label="하루 수면 시간">
+                <span class="range__scale"><span>4h</span><span>6h</span><span>8h</span><span>10h</span></span>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">간헐적 단식 시간</span>
+              <div class="seg seg--fill" id="fastSeg" role="group" aria-label="간헐적 단식 시간">
+                <button class="seg__btn is-on" type="button" data-val="none" aria-pressed="true">안 함</button>
+                <button class="seg__btn" type="button" data-val="12" aria-pressed="false">12시간</button>
+                <button class="seg__btn" type="button" data-val="16" aria-pressed="false">16시간</button>
+                <button class="seg__btn" type="button" data-val="18" aria-pressed="false">18시간+</button>
+                <button class="seg__btn" type="button" data-val="20" aria-pressed="false">20시간+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🍽️</span>
+            <h3 class="fcard__title">식단 · 투약</h3>
+            <span class="fcard__note">모르면 자동 추정</span>
+          </div>
+          <div class="fgrid">
+            <div class="field field--full">
+              <span class="field__label">하루 섭취 칼로리 <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="kcal" type="number" inputmode="numeric" min="600" max="5000" step="10" placeholder="모르면 자동 추정" autocomplete="off" disabled>
+                <span class="input__unit">kcal</span>
+              </span>
+              <label class="switch-row">
+                <input type="checkbox" id="autoKcal" checked>
+                <span>칼로리를 모르겠어요 — 목표 섭취량으로 자동 추정</span>
+              </label>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">하루 단백질 섭취 수준</span>
+              <div class="seg seg--fill" id="proteinSeg" role="group" aria-label="하루 단백질 섭취 수준">
+                <button class="seg__btn" type="button" data-val="low" aria-pressed="false">부족</button>
+                <button class="seg__btn is-on" type="button" data-val="normal" aria-pressed="true">보통</button>
+                <button class="seg__btn" type="button" data-val="high" aria-pressed="false">충분</button>
+              </div>
+              <span class="field__hint">부족 = 끼니당 20g 미만 · 보통 = 하루 60~90g · 충분 = 체중 1kg당 1.2g 이상</span>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">비만약 투약 여부</span>
+              <div class="seg seg--fill" id="medSeg" role="group" aria-label="비만약 투약 여부">
+                <button class="seg__btn is-on" type="button" data-val="none" aria-pressed="true">안 함</button>
+                <button class="seg__btn" type="button" data-val="glp1" aria-pressed="false">GLP-1<small>마운자로·위고비</small></button>
+                <button class="seg__btn" type="button" data-val="other" aria-pressed="false">기타 비만약</button>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">최근 2주 이상 체중 정체</span>
+              <div class="seg seg--fill" id="plateauSeg" role="group" aria-label="최근 2주 이상 체중 정체 여부">
+                <button class="seg__btn" type="button" data-val="yes" aria-pressed="false">정체 중</button>
+                <button class="seg__btn is-on" type="button" data-val="no" aria-pressed="true">아니오</button>
+              </div>
+              <span class="field__hint">아침 공복 체중 7일 평균이 2주 동안 0.3kg도 줄지 않았으면 '정체 중'입니다.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actionbar is-on">
+        <div class="container actionbar__inner">
+          <div class="actionbar__count">
+            <span id="countText">12개 항목</span>
+            <span class="actionbar__hint" id="countHint">체중만 넣어도 계산됩니다</span>
+          </div>
+          <div class="actionbar__btns">
+            <button class="btn btn--ghost" type="button" id="resetBtn">초기화</button>
+            <button class="btn btn--primary" type="button" id="analyzeBtn" aria-controls="result">
+              <span>정밀 진단하기</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="noscript">이 진단기는 자바스크립트로 동작해요. 브라우저에서 자바스크립트를 켜주세요.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section section--result" id="result" hidden>
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 2</p>
+        <h2 class="section__title">정밀 진단 결과</h2>
+        <p class="section__desc" id="resultSub"></p>
+      </div>
+
+      <div id="verdictBox" aria-live="polite"></div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">📊 하루 에너지 계산</h3></div>
+        <div class="metrics" id="metricGrid"></div>
+        <div id="adaptNote"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🧪 필수 영양 처방</h3></div>
+        <p class="block__desc" id="rxDesc"></p>
+        <div class="card"><div class="rx" id="rxList"></div></div>
+        <div class="note-box" id="rxNote"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🔥 맞춤 정체기 탈출 처방</h3></div>
+        <div class="plan" id="planList"></div>
+      </div>
+
+      <div class="block" id="medBlock" hidden>
+        <div class="block__head"><h3 class="block__title">💉 비만약 병용 주의사항</h3></div>
+        <div id="medCards"></div>
+      </div>
+
+      <div class="block" id="plateauBlock" hidden>
+        <div class="block__head"><h3 class="block__title">🔁 2주 리셋 프로토콜</h3></div>
+        <div id="plateauCards"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">📚 계산 근거</h3></div>
+        <ul class="src-list">
+          <li>· 기초대사량 — Mifflin MD et al., <em>Am J Clin Nutr</em> 1990;51:241-7 (Mifflin-St Jeor 공식). 체지방률 입력 시 Katch FI &amp; McArdle WD, <em>Nutrition, Weight Control and Exercise</em> 1996 (Katch-McArdle).</li>
+          <li>· 활동·운동 소비 — 2011 Compendium of Physical Activities의 MET 값(걷기 4.3, 근력운동 5.0) 기준 추정. 운동 소비는 실제 총소비보다 크게 잡히는 경향이 있어 과운동 시 보정계수를 적용했습니다.</li>
+          <li>· 단백질 — 체중 감량·저항운동 병행 시 1.2~1.6 g/kg (Helms ER et al., <em>J Int Soc Sports Nutr</em> 2014; Longland TM et al., <em>Am J Clin Nutr</em> 2016).</li>
+          <li>· 수분·전해질 — 2020 한국인 영양소 섭취기준(마그네슘·칼륨), 미국 IOM DRI(나트륨·보충제 마그네슘 상한).</li>
+          <li>· 감량 속도 — 주 체중의 0.5~1% (Garthe I et al., <em>Int J Sport Nutr Exerc Metab</em> 2011).</li>
+        </ul>
+      </div>
+
+      <div class="result-foot">
+        <button class="btn btn--ghost" type="button" id="copyBtn">결과 복사</button>
+        <button class="btn btn--ghost" type="button" id="editBtn">수치 다시 넣기</button>
+      </div>
+
+      <div class="note-box">
+        <b>의학적 면책</b> — 이 결과는 공개된 공식과 문헌 권고로 계산한 <b>참고용 추정치</b>이며, 질환을 진단하거나 치료하지 않습니다. 2주 이상 체중이 줄지 않으면서 피로·탈모·생리 불순·어지럼이 동반되면 감량을 멈추고 내과 진료를 받으세요. 비만약·당뇨약의 용량이나 복용법은 반드시 처방한 의사·약사와 상담하세요.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--columns" id="columns">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">COLUMNS</p>
+        <h2 class="section__title">정체기, 왜 그럴까?</h2>
+        <p class="section__desc">광고·협찬 없이 논문과 성분표만 해부한 연구소 칼럼이에요. 진단 결과와 함께 읽으면 더 정확해집니다.</p>
+      </div>
+      <div class="columns" id="columnGrid"></div>
+      <a class="columns__all" href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">
+        팩트체크 건강연구소 칼럼 전체 보기
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <div class="block" style="margin-top:32px">
+        <div class="block__head"><h3 class="block__title">🧰 함께 쓰면 좋은 체크기</h3></div>
+        <div class="tool-links">
+          <a class="tool-link" href="https://hjh7085-bit.github.io/glucose-lab/">
+            <span class="tool-link__icon" aria-hidden="true">🩸</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">웹툴 4호</span>
+              <span class="tool-link__title">공복혈당 · 당화혈색소 체크기</span>
+              <span class="tool-link__meta">HbA1c ↔ 평균혈당 환산 · TG/HDL</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/factcheck-lab/">
+            <span class="tool-link__icon" aria-hidden="true">💊</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">웹툴 1호</span>
+              <span class="tool-link__title">마운자로 · 영양제 중복 체크기</span>
+              <span class="tool-link__meta">겹침·흡수 경쟁·복용 시간표</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/link/">
+            <span class="tool-link__icon" aria-hidden="true">🔗</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">허브</span>
+              <span class="tool-link__title">체크기 · 칼럼 · SNS 한 번에</span>
+              <span class="tool-link__meta">팩트체크 건강연구소 링크</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">FAQ</p>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>하루 3시간씩 걷는데도 체중이 안 빠지는 이유가 뭔가요?</summary>
+          <p>운동량이 많으면 몸이 두 가지로 반응해요. 첫째, 운동한 만큼 <b>비운동성 활동량(NEAT)</b>이 줄어 하루 총소비가 생각만큼 늘지 않습니다. 둘째, 적자와 수면 부족이 겹치면 <b>코르티솔</b>이 올라 수분을 붙잡고 식욕이 커져요. 체중은 7일 평균으로 <b>2주 이상 0.3kg도</b> 줄지 않을 때 정체로 판단하고, 그때는 운동을 45~60분으로 줄이고 적자를 10~15%로 낮추는 쪽이 더 빨리 움직입니다.</p>
+        </details>
+        <details>
+          <summary>16시간 단식은 계속 유지해야 하나요?</summary>
+          <p>단식 자체가 감량을 만드는 게 아니라 <b>하루 섭취를 줄이기 쉽게 만드는 도구</b>예요. 총 섭취와 단백질이 충분한데 2주 이상 멈췄다면 단식을 18~20시간으로 늘리기보다 <b>12~14시간으로 줄이고</b> 그만큼 단백질과 수면을 채우는 편이 대사 적응을 푸는 데 유리합니다.</p>
+        </details>
+        <details>
+          <summary>기초대사량보다 적게 먹으면 더 빨리 빠지지 않나요?</summary>
+          <p>단기적으로는 체중이 줄지만 <b>근육 손실과 대사 적응</b>이 함께 와요. Mifflin-St Jeor 기초대사량의 90% 미만으로 오래 먹으면 감량 속도가 오히려 둔해지고, 중단 후 되돌아오는 체중이 늘어납니다. 최소 <b>기초대사량의 1.05배</b> 또는 남성 1,500kcal·여성 1,200kcal 이상을 지키는 게 권장됩니다.</p>
+        </details>
+        <details>
+          <summary>마운자로·위고비를 맞으면서 근손실은 어떻게 막나요?</summary>
+          <p>GLP-1 계열은 식사량이 줄어 단백질 섭취가 급감하기 쉬워 <b>근손실 비율</b>이 커져요. 체중 1kg당 1.2~1.6g의 단백질을 끼니마다 25~40g씩 나눠 채우고, <b>주 2~3회 근력운동</b>과 하루 1.5~2L 이상의 수분을 함께 가져가야 합니다. 어지럼·식은땀 같은 저혈당 증상이 있으면 처방 의사와 상담하세요.</p>
+        </details>
+        <details>
+          <summary>이 진단 수치를 병원 진료에 그대로 써도 되나요?</summary>
+          <p>아니요. 이 계산은 공개된 공식과 문헌 권고를 정리한 <b>추정치</b>이며 의학적 진단이 아닙니다. 갑상선 질환·신장질환·당뇨약 복용 중이라면 실제 대사량이 크게 다를 수 있으니 내과 전문의와 상담하세요.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--lab">
+    <div class="container container--narrow lab">
+      <div class="lab__badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.6 17a3 3 0 0 0 2.7 4.4h7.4A3 3 0 0 0 18.4 17L14 8.2V3"/><path d="M7.2 14h9.6"/></svg>
+      </div>
+      <div>
+        <h2>팩트체크 건강연구소는</h2>
+        <p>광고·협찬을 받지 않고, 공개된 논문과 성분표만 해부합니다. 직접 겪은 감량 기록도 함께 올려요. 이 진단기의 공식과 권고 범위도 문헌에 근거해 만들었고, 새로운 근거가 나오면 계속 고칩니다.</p>
+        <div class="lab__links">
+          <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">네이버 블로그</a>
+          <a href="https://www.instagram.com/factcheck_denny/" target="_blank" rel="noopener">인스타그램</a>
+          <a href="https://www.threads.com/@factcheck_denny" target="_blank" rel="noopener">스레드</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <strong>팩트체크 건강연구소</strong>
+      <p>문헌 기반 참고용이며, 질환의 진단·치료를 대신하지 않습니다.</p>
+    </div>
+    <div class="site-footer__meta">
+      <nav class="site-footer__links" aria-label="사이트 정보"><a href="../link/">웹툴 60종</a><a href="../about.html">소개</a><a href="../privacy.html">개인정보처리방침</a></nav>
+      <p>© <span id="year">2026</span> Fact-check Health Lab · 무료 웹툴</p>
+      <p class="site-footer__notice">본 페이지는 의료 행위가 아닌 정보 제공 도구입니다. 응급 상황에서는 119 또는 가까운 응급실을 이용하세요.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

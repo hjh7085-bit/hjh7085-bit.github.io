@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>오메가3 순수 함량 & rTG 판독기 — EPA+DHA %·필요 알 수 계산 | 팩트체크 건강연구소</title>
+<meta name="description" content="캡슐 총중량과 EPA+DHA 함량만 넣으면 실제 순수 함량 비율(%), 고순도(80%+) 판정, 1일 1,000mg·2,000mg 목표에 필요한 캡슐 수와 1,000mg당 비용까지 계산합니다. rTG·TG·EE 제형 차이 설명 포함. 무료 참고용 웹툴.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/omega-check/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="오메가3 순수 함량 & rTG 판독기">
+<meta property="og:description" content="'오메가3 1,000mg'에 EPA+DHA는 얼마나? 순수 함량 %·고순도 판정·필요 캡슐 수를 한 번에.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/omega-check/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="오메가3 순수 함량 & rTG 판독기">
+<meta name="twitter:description" content="캡슐 무게 대비 EPA+DHA %와 1,000mg당 비용까지. 라벨 속 숫자의 진실.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/omega-check/assets/og-image.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "오메가3 순수 함량 & rTG 판독기",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "description": "오메가3 캡슐의 총중량과 EPA+DHA 함량을 입력해 순수 함량 비율, 고순도 여부, 1일 목표량에 필요한 캡슐 수와 1,000mg당 비용을 계산하는 무료 웹툴.",
+      "publisher": { "@type": "Organization", "name": "팩트체크 건강연구소" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "'오메가3 1,000mg'이라고 적힌 제품은 EPA+DHA가 1,000mg인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "대부분 아닙니다. 앞면의 '오메가3 1,000mg'은 캡슐에 든 기름의 총량인 경우가 많고, 실제 EPA+DHA는 300~600mg 수준입니다. 영양정보 표의 'EPA ○○mg, DHA ○○mg'을 더해야 실제 유효 성분량이 나옵니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "순도 80% 이상이면 무조건 좋은 제품인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "순도가 높으면 같은 캡슐 수로 더 많은 EPA+DHA를 먹을 수 있어 하루 목표량을 채우기 쉽습니다. 다만 순도만 높고 산패(산가·과산화물가) 관리가 안 된 제품은 오히려 손해입니다. rTG 80%는 기술력이 필요한 편이라 가격이 높고, 가격 대비 실제 EPA+DHA mg으로 비교하는 것이 더 정확합니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "rTG가 EE보다 정말 잘 흡수되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "단회 투여 연구에서는 rTG·TG가 EE보다 흡수가 빠르고 높게 나온 경우가 많습니다(EE는 TG의 40~48% 수준으로 보고된 연구도 있음). 다만 2024년 종합 리뷰는 급성 흡수 차이가 장기 복용 결과로 항상 이어지지는 않는다고 정리했습니다. EE 제품도 지방이 포함된 식사와 함께 먹으면 흡수가 개선됩니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "하루 EPA+DHA는 얼마나 먹어야 하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "건강 유지를 위한 일반적인 권고는 하루 EPA+DHA 250~500mg 수준이고, 중성지방 관리 등 목적이 있으면 1,000~2,000mg 이상을 쓰기도 합니다. 미국심장협회는 관상동맥질환 환자에게 EPA+DHA 1g 정도를 언급했지만, 고용량은 출혈 위험·심방세동 위험과 함께 봐야 하므로 복용 중인 약이 있다면 의사와 상의하세요." }
+        },
+        {
+          "@type": "Question",
+          "name": "캡슐 총중량에 껍질도 포함되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "제품에 따라 다릅니다. 영양정보의 '1캡슐당' 중량이 내용물(오일) 기준인지, 껍질까지 포함한 총중량인지 확인해야 합니다. 껍질은 보통 200~250mg이라, 총중량으로 계산하면 순도가 실제보다 20%p 가까이 낮게 나옵니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "산패는 어떻게 확인하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "라벨에 산가(acid value)·과산화물가(POV)·TOTOX 같은 산패 지표나 제3자 시험 성적이 있는지 보세요. 캡슐을 터뜨렸을 때 비린내·플라스틱 냄새가 강하거나, 유통기한이 임박했거나, 직사광선에 놓인 제품은 피하는 것이 좋습니다. 냉장 보관은 산패를 늦추는 데 도움이 됩니다." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-bar">
+<a class="skip-link" href="#checker">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="https://hjh7085-bit.github.io/link/" aria-label="팩트체크 건강연구소 링크 허브">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5c3.6 4 6.2 7 6.2 10.2A6.2 6.2 0 0 1 5.8 13.7C5.8 10.5 8.4 7.5 12 3.5Z"/>
+          <path d="M9.6 14.4c.2 1.4 1.1 2.3 2.4 2.5"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>팩트체크 건강연구소</strong>
+        <small>Fact-check Health Lab</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#checker">순도 판독</a>
+      <a href="#forms">rTG·EE</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://hjh7085-bit.github.io/ul-calc/">영양제 UL</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>팩트체크 건강연구소 · 오메가3 판독기</p>
+      <h1 class="hero__title">"오메가3 1,000mg"<br><em>EPA+DHA</em>는 얼마일까</h1>
+      <p class="hero__sub">앞면의 큰 숫자는 대개 <b>기름 총량</b>입니다. 실제로 몸에 쓰이는 건 <b>EPA와 DHA의 합</b>이죠. 캡슐 무게와 라벨의 EPA·DHA만 넣으면 <b>순수 함량 비율</b>, 고순도 여부, 하루 목표를 채우는 데 필요한 <b>캡슐 수와 1,000mg당 비용</b>까지 계산해 드립니다.</p>
+
+      <ul class="hero__legend" aria-label="순도 판정 안내">
+        <li><span class="chip chip--red">&lt;30%</span> 저순도</li>
+        <li><span class="chip chip--amber">30~59%</span> 보통</li>
+        <li><span class="chip chip--green">60~79%</span> 고순도</li>
+        <li><span class="chip chip--green">80%+</span> 초고순도</li>
+      </ul>
+
+      <div class="hero__stats">
+        <div><strong>3초</strong><span>순도 계산</span></div>
+        <div><strong>1,000mg</strong><span>기준 단가 비교</span></div>
+        <div><strong>rTG·EE</strong><span>제형 해설</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="container notice__inner">
+      <span class="notice__icon" aria-hidden="true">⚕️</span>
+      <p><b>참고용 안내</b> — 라벨에 적힌 함량과 공개된 기준으로 계산하는 <b>참고 도구</b>입니다. 오메가3는 식품(건강기능식품)이며, 질환 치료나 처방을 대신하지 않습니다. 항응고제·항혈소판제를 복용 중이거나 수술을 앞뒀다면 고용량 복용 전에 의사와 상의하세요.</p>
+    </div>
+  </section>
+
+  <section class="section" id="checker">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 1</p>
+        <h2 class="section__title">라벨 숫자를 <em>그대로</em> 옮겨 적으세요</h2>
+        <p class="section__desc">영양정보 표의 '1캡슐당' 값을 넣으면 됩니다. 제품 가격을 함께 넣으면 실제 효율(1,000mg당 원)까지 계산합니다.</p>
+      </div>
+
+      <div class="presets">
+        <span class="presets__label">예시로 보기</span>
+        <button class="preset" type="button" data-preset="cheap">저가 EE 1,000mg</button>
+        <button class="preset" type="button" data-preset="rtg">rTG 고순도</button>
+        <button class="preset" type="button" data-preset="label">"오메가3 1,050mg" 대형 캡슐</button>
+      </div>
+
+      <div class="form-stack">
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">💧</span>
+            <h3 class="fcard__title">캡슐 1정 정보</h3>
+            <span class="fcard__note">영양정보 기준</span>
+          </div>
+          <div class="fgrid">
+            <label class="field">
+              <span class="field__label">캡슐 내용물 총중량</span>
+              <span class="input-wrap">
+                <input class="input" id="contentMg" type="number" inputmode="numeric" min="100" max="3000" step="10" placeholder="예: 1000" autocomplete="off">
+                <span class="input__unit">mg</span>
+              </span>
+              <span class="field__hint">기름(내용물) 기준 · 껍질 제외</span>
+            </label>
+            <label class="field">
+              <span class="field__label">EPA + DHA 합계</span>
+              <span class="input-wrap">
+                <input class="input" id="epaDha" type="number" inputmode="numeric" min="10" max="2000" step="10" placeholder="예: 600" autocomplete="off">
+                <span class="input__unit">mg</span>
+              </span>
+              <span class="field__hint">영양정보의 EPA + DHA</span>
+            </label>
+            <label class="field">
+              <span class="field__label">EPA <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="epa" type="number" inputmode="numeric" min="0" max="2000" step="10" placeholder="예: 360" autocomplete="off">
+                <span class="input__unit">mg</span>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">DHA <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="dha" type="number" inputmode="numeric" min="0" max="2000" step="10" placeholder="예: 240" autocomplete="off">
+                <span class="input__unit">mg</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🥄</span>
+            <h3 class="fcard__title">먹는 방법</h3>
+            <span class="fcard__note">하루 기준</span>
+          </div>
+          <div class="fgrid">
+            <label class="field">
+              <span class="field__label">1일 섭취 캡슐 수</span>
+              <span class="input-wrap">
+                <input class="input" id="perDay" type="number" inputmode="numeric" min="1" max="12" step="1" placeholder="예: 2" autocomplete="off">
+                <span class="input__unit">정</span>
+              </span>
+              <span class="field__hint">제품 권장 섭취량 기준</span>
+            </label>
+            <label class="field">
+              <span class="field__label">제품 가격 <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="price" type="number" inputmode="numeric" min="0" max="500000" step="100" placeholder="예: 29900" autocomplete="off">
+                <span class="input__unit">원</span>
+              </span>
+              <span class="field__hint">1병 가격 · 총 캡슐 수 필요</span>
+            </label>
+            <label class="field">
+              <span class="field__label">1병 총 캡슐 수 <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="capsTotal" type="number" inputmode="numeric" min="1" max="1000" step="1" placeholder="예: 60" autocomplete="off">
+                <span class="input__unit">정</span>
+              </span>
+              <span class="field__hint">가격 넣었을 때만 사용</span>
+            </label>
+            <div class="field field--full">
+              <span class="field__label">제형 <span class="opt">라벨 표기</span></span>
+              <div class="seg" role="group" aria-label="오메가3 제형 선택">
+                <button class="seg__btn is-on" type="button" data-form="unknown">모름</button>
+                <button class="seg__btn" type="button" data-form="rtg">rTG</button>
+                <button class="seg__btn" type="button" data-form="tg">TG</button>
+                <button class="seg__btn" type="button" data-form="ee">EE</button>
+              </div>
+            </div>
+            <div class="field field--full">
+              <span class="field__label">하루 목표 EPA+DHA</span>
+              <div class="seg seg--fill" role="group" aria-label="하루 목표량 선택">
+                <button class="seg__btn" type="button" data-target="500">500mg<small>기본 권고</small></button>
+                <button class="seg__btn is-on" type="button" data-target="1000">1,000mg<small>일반 목표</small></button>
+                <button class="seg__btn" type="button" data-target="2000">2,000mg<small>고용량</small></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actionbar is-on">
+        <div class="actionbar__inner">
+          <div class="actionbar__count">
+            <span id="countText">숫자를 넣으면 자동 계산</span>
+            <span class="actionbar__hint" id="countHint">캡슐 중량과 EPA+DHA만 있어도 됩니다</span>
+          </div>
+          <div class="actionbar__btns">
+            <button class="btn btn--ghost" type="button" id="resetBtn">초기화</button>
+            <button class="btn btn--primary" type="button" id="analyzeBtn" aria-controls="result">
+              <span>판독 결과</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="noscript">이 계산기는 자바스크립트로 동작해요. 브라우저에서 자바스크립트를 켜주세요.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section section--result" id="result" hidden>
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 2</p>
+        <h2 class="section__title">이 제품의 실제</h2>
+        <p class="section__desc" id="resultSub"></p>
+      </div>
+
+      <div id="verdictBox" aria-live="polite"></div>
+
+      <div class="metrics" id="metricRow" style="margin-top:14px"></div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🧪 순수 함량 비율</h3></div>
+        <p class="block__desc">캡슐 기름 <b id="purityBase">1,000mg</b> 중 <b id="purityPart">600mg</b>이 EPA+DHA입니다. 아래 막대에서 80% 선과 비교해 보세요.</p>
+        <div class="card">
+          <div class="purity">
+            <div class="purity__track">
+              <span class="purity__fill" id="purityFill"></span>
+              <span class="purity__mark" style="left:80%" aria-hidden="true"></span>
+            </div>
+            <div class="purity__scale"><span>0%</span><span>25</span><span>50</span><span>75</span><span>100%</span></div>
+            <p class="purity__note" id="purityNote"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🎯 하루 목표에 필요한 캡슐</h3></div>
+        <div class="card"><div class="rx" id="targetRows"></div></div>
+        <p class="note-box" id="dailyNote"></p>
+      </div>
+
+      <div class="block" id="costBlock" hidden>
+        <div class="block__head"><h3 class="block__title">💰 1,000mg당 실제 비용</h3></div>
+        <div class="card"><div class="rx" id="costRows"></div></div>
+        <p class="block__desc">비교 기준은 <b>1,000mg EPA+DHA당 가격</b>입니다. 캡슐 수·순도가 다른 제품을 한 줄로 비교할 수 있는 유일한 숫자예요.</p>
+      </div>
+
+      <div class="block" id="formBlock">
+        <div class="block__head"><h3 class="block__title">⚗️ 이 제형은 어떤가</h3></div>
+        <div id="formArea"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🏷️ 라벨에서 걸러야 할 표현</h3></div>
+        <div class="card"><div class="rx">
+          <div class="rx__row"><span class="rx__name">"오메가3 1,000mg"<span>기름 총량일 뿐</span></span><span class="rx__val" style="font-size:13.5px;font-weight:700">EPA+DHA mg을 따로 확인</span></div>
+          <div class="rx__row"><span class="rx__name">"1일 4캡슐 기준 1,200mg"<span>캡슐당은 300mg</span></span><span class="rx__val" style="font-size:13.5px;font-weight:700">1캡슐당으로 환산</span></div>
+          <div class="rx__row"><span class="rx__name">"총 오메가3 900mg"<span>EPA·DHA 외 지방산 포함</span></span><span class="rx__val" style="font-size:13.5px;font-weight:700">DPA·ALA가 섞여 있을 수 있음</span></div>
+          <div class="rx__row"><span class="rx__name">제형 표기 없음<span>rTG/TG/EE 미기재</span></span><span class="rx__val" style="font-size:13.5px;font-weight:700">투명성 낮음으로 판단</span></div>
+        </div></div>
+      </div>
+
+      <div class="result-foot">
+        <button class="btn btn--ghost" type="button" id="copyBtn">결과 복사</button>
+        <button class="btn btn--ghost" type="button" id="editBtn">숫자 다시 넣기</button>
+      </div>
+
+      <div class="note-box">
+        <b>의학적 면책</b> — 이 결과는 라벨 함량과 공개된 기준에 따른 <b>참고용</b> 계산입니다. EPA+DHA 섭취량은 개인의 건강 상태(중성지방, 출혈 경향, 심방세동 위험, 복용 약)에 따라 달라야 하며, 고용량은 의사와 상의하세요. 항응고제·항혈소판제 복용 중이거나 수술 전이라면 반드시 먼저 상담하십시오.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="forms">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">FORM</p>
+        <h2 class="section__title">rTG · TG · EE, <em>무엇이 다른가</em></h2>
+        <p class="section__desc">모두 EPA·DHA를 담는 방식의 차이입니다. 흡수와 가격, 라벨 읽는 법이 달라집니다.</p>
+      </div>
+
+      <div class="forms">
+        <article class="formcard">
+          <div class="formcard__head"><span class="formcard__tag">자연</span><h3 class="formcard__title">TG (천연 트리글리세리드)</h3></div>
+          <p class="formcard__body">생선 기름을 그대로 정제한 형태입니다. EPA+DHA 함량은 대개 <b>18~30%</b>로 낮지만, 몸이 익숙한 구조라 흡수가 좋습니다. "정제 어유" 제품이 여기에 해당합니다.</p>
+          <p class="formcard__meta">순도 18~30% · 흡수 좋음 · 가격 낮음</p>
+        </article>
+        <article class="formcard formcard--accent">
+          <div class="formcard__head"><span class="formcard__tag">농축</span><h3 class="formcard__title">rTG (재에스테르화 TG)</h3></div>
+          <p class="formcard__body">EE로 농축한 뒤 다시 트리글리세리드 구조로 되돌린 형태입니다. <b>60~85%</b>의 높은 순도를 내면서 흡수도 좋아, 고순도 제품의 대명사로 쓰입니다. 공정이 한 단계 더 들어 가격이 높습니다.</p>
+          <p class="formcard__meta">순도 60~85% · 흡수 좋음 · 가격 높음</p>
+        </article>
+        <article class="formcard">
+          <div class="formcard__head"><span class="formcard__tag">합성</span><h3 class="formcard__title">EE (에틸에스터)</h3></div>
+          <p class="formcard__body">지방산을 에틸알코올에 붙여 농축한 형태로, 가장 흔하고 저렴합니다. 단회 연구에서는 TG보다 흡수가 낮게(약 40~48%) 나온 보고가 있으나, 장기 복용에서는 차이가 일관되지 않습니다. <b>지방이 든 식사와 함께</b> 먹으면 흡수가 개선됩니다.</p>
+          <p class="formcard__meta">순도 50~70% · 흡수 상대적 낮음 · 가격 낮음</p>
+        </article>
+      </div>
+
+      <div class="note-box note-box--mint" style="margin-top:16px">
+        <b>정리</b> — 순도가 높으면 하루 목표를 적은 캡슐로 채울 수 있습니다. 다만 <b>가격 ÷ 실제 EPA+DHA mg</b>으로 비교하면 rTG 고순도가 비싸기만 한 경우도, EE가 더 효율적인 경우도 있습니다. 산패 지표(산가·과산화물가)와 제3자 시험 성적이 있으면 함께 보세요.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--columns">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">COLUMNS</p>
+        <h2 class="section__title">오메가3, 더 깊게 보기</h2>
+        <p class="section__desc">광고·협찬 없이 논문과 성분표만 해부한 연구소 칼럼이에요.</p>
+      </div>
+      <div class="columns" id="columnGrid"></div>
+      <a class="columns__all" href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">
+        팩트체크 건강연구소 칼럼 전체 보기
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <div class="block" style="margin-top:32px">
+        <div class="block__head"><h3 class="block__title">🧰 함께 쓰면 좋은 체크기</h3></div>
+        <div class="tool-links">
+          <a class="tool-link" href="https://hjh7085-bit.github.io/ul-calc/">
+            <span class="tool-link__icon" aria-hidden="true">⚖️</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">영양제 UL</span>
+              <span class="tool-link__title">영양제 1일 상한선 합산기</span>
+              <span class="tool-link__meta">비타민E·아연 겹침 확인</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/drug-check/">
+            <span class="tool-link__icon" aria-hidden="true">🚫</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">약물 궁합</span>
+              <span class="tool-link__title">처방약 + 영양제 금지 조합</span>
+              <span class="tool-link__meta">항응고제와 오메가3 출혈 위험</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/link/">
+            <span class="tool-link__icon" aria-hidden="true">🔗</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">허브</span>
+              <span class="tool-link__title">체크기 · 칼럼 · SNS 한 번에</span>
+              <span class="tool-link__meta">팩트체크 건강연구소 링크</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">FAQ</p>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>"오메가3 1,000mg"이라고 적힌 제품은 EPA+DHA가 1,000mg인가요?</summary>
+          <p>대부분 아닙니다. 앞면의 '오메가3 1,000mg'은 <b>캡슐에 든 기름의 총량</b>인 경우가 많고, 실제 EPA+DHA는 300~600mg 수준입니다. 영양정보 표의 'EPA ○○mg, DHA ○○mg'을 더해야 실제 유효 성분량이 나옵니다.</p>
+        </details>
+        <details>
+          <summary>순도 80% 이상이면 무조건 좋은 제품인가요?</summary>
+          <p>순도가 높으면 같은 캡슐 수로 더 많은 EPA+DHA를 먹을 수 있어 하루 목표량을 채우기 쉽습니다. 다만 순도만 높고 <b>산패(산가·과산화물가)</b> 관리가 안 된 제품은 오히려 손해입니다. rTG 80%는 기술력이 필요한 편이라 가격이 높고, 가격 대비 실제 EPA+DHA mg으로 비교하는 것이 더 정확합니다.</p>
+        </details>
+        <details>
+          <summary>rTG가 EE보다 정말 잘 흡수되나요?</summary>
+          <p>단회 투여 연구에서는 rTG·TG가 EE보다 흡수가 빠르고 높게 나온 경우가 많습니다(EE는 TG의 40~48% 수준으로 보고된 연구도 있음). 다만 2024년 종합 리뷰는 <b>급성 흡수 차이가 장기 복용 결과로 항상 이어지지는 않는다</b>고 정리했습니다. EE 제품도 지방이 포함된 식사와 함께 먹으면 흡수가 개선됩니다.</p>
+        </details>
+        <details>
+          <summary>하루 EPA+DHA는 얼마나 먹어야 하나요?</summary>
+          <p>건강 유지를 위한 일반적인 권고는 하루 <b>EPA+DHA 250~500mg</b> 수준이고, 중성지방 관리 등 목적이 있으면 1,000~2,000mg 이상을 쓰기도 합니다. 미국심장협회는 관상동맥질환 환자에게 EPA+DHA 1g 정도를 언급했지만, 고용량은 출혈 위험·심방세동 위험과 함께 봐야 하므로 복용 중인 약이 있다면 의사와 상의하세요.</p>
+        </details>
+        <details>
+          <summary>캡슐 총중량에 껍질도 포함되나요?</summary>
+          <p>제품에 따라 다릅니다. 영양정보의 '1캡슐당' 중량이 <b>내용물(오일) 기준</b>인지, 껍질까지 포함한 총중량인지 확인해야 합니다. 껍질은 보통 200~250mg이라, 총중량으로 계산하면 순도가 실제보다 20%p 가까이 낮게 나옵니다.</p>
+        </details>
+        <details>
+          <summary>산패는 어떻게 확인하나요?</summary>
+          <p>라벨에 산가(acid value)·과산화물가(POV)·TOTOX 같은 산패 지표나 제3자 시험 성적이 있는지 보세요. 캡슐을 터뜨렸을 때 비린내·플라스틱 냄새가 강하거나, 유통기한이 임박했거나, 직사광선에 놓인 제품은 피하는 것이 좋습니다. 냉장 보관은 산패를 늦추는 데 도움이 됩니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--lab">
+    <div class="container container--narrow lab">
+      <div class="lab__badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.6 17a3 3 0 0 0 2.7 4.4h7.4A3 3 0 0 0 18.4 17L14 8.2V3"/><path d="M7.2 14h9.6"/></svg>
+      </div>
+      <div>
+        <h2>팩트체크 건강연구소는</h2>
+        <p>광고·협찬을 받지 않고, 공개된 논문과 성분표만 해부합니다. 직접 겪은 감량 기록도 함께 올려요. 이 판독기도 라벨 읽는 법을 공개 자료 기준으로 정리했고, 새 연구가 나오면 계속 고칩니다.</p>
+        <div class="lab__links">
+          <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">네이버 블로그</a>
+          <a href="https://www.instagram.com/factcheck_denny/" target="_blank" rel="noopener">인스타그램</a>
+          <a href="https://www.threads.com/@factcheck_denny" target="_blank" rel="noopener">스레드</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <strong>팩트체크 건강연구소</strong>
+      <p>문헌 기반 참고용이며, 질환의 진단·치료를 대신하지 않습니다.</p>
+    </div>
+    <div class="site-footer__meta">
+      <nav class="site-footer__links" aria-label="사이트 정보"><a href="../link/">웹툴 60종</a><a href="../about.html">소개</a><a href="../privacy.html">개인정보처리방침</a></nav>
+      <p>© <span id="year">2026</span> Fact-check Health Lab · 무료 웹툴</p>
+      <p class="site-footer__notice">본 페이지는 의료 행위가 아닌 정보 제공 도구입니다. 응급 상황에서는 119 또는 가까운 응급실을 이용하세요.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

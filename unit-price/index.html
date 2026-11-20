@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1+1·대용량 g당 역산기 (100g당 실제 단가) | 팩트체크 건강연구소</title>
+<meta name="description" content="상품 A(단품)와 B(1+1·묶음·대용량)의 가격·용량·수량을 넣으면 100g(100mL·1개)당 실제 단가를 계산해 B가 몇 % 더 비싼지·저렴한지 즉시 판정합니다. 단위가격표시제 기준.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/unit-price/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="1+1·대용량 g당 역산기">
+<meta property="og:description" content="100g당 실제 단가로 1+1이 진짜 싼지 즉시 판정.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/unit-price/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="1+1·대용량 g당 역산기">
+<meta name="twitter:description" content="묶음·대용량이 오히려 비싼 경우를 100g당 단가로 잡아냅니다.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/unit-price/assets/og-image.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="has-bar">
+<a class="skip-link" href="#checker">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="https://hjh7085-bit.github.io/link/" aria-label="팩트체크 건강연구소 링크 허브">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5c3.6 4 6.2 7 6.2 10.2A6.2 6.2 0 0 1 5.8 13.7C5.8 10.5 8.4 7.5 12 3.5Z"/>
+          <path d="M9.6 14.4c.2 1.4 1.1 2.3 2.4 2.5"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>팩트체크 건강연구소</strong>
+        <small>Fact-check Health Lab</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#checker">단가 계산</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://hjh7085-bit.github.io/link/">체크기 허브</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__inner container">
+      <p class="hero__eyebrow"><span class="dot"></span>팩트체크 건강연구소 · 생활 웹툴</p>
+      <h1 class="hero__title">1+1 · 대용량<br><em>g당 역산기</em></h1>
+      <p class="hero__sub">“1+1”, “대용량”, “묶음 할인”이 항상 싼 건 아닙니다. 상품 A(단품)와 B(묶음)의 가격·용량·수량을 넣으면 <b>100g(100mL·1개)당 실제 단가</b>를 계산해 <b>B가 몇 % 더 비싼지</b> 바로 판정합니다.</p>
+
+      <ul class="hero__legend" aria-label="판정 표시 안내">
+        <li><span class="chip chip--green">🟢 B가 저렴</span> 100g당 단가 낮음</li>
+        <li><span class="chip chip--amber">🟡 거의 같음</span> 차이 2% 이내</li>
+        <li><span class="chip chip--red">🔴 B가 비쌈</span> 1+1인데 손해</li>
+      </ul>
+
+      <div class="hero__stats">
+        <div><strong>100g</strong><span>기준 단가</span></div>
+        <div><strong>1+1</strong><span>수량 자동 반영</span></div>
+        <div><strong>즉시</strong><span>손익 판정</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="container notice__inner">
+      <span class="notice__icon" aria-hidden="true">🏷️</span>
+      <p><b>알고 계셨나요</b> — 정부의 <b>단위가격 표시제</b>가 2026년 4월 7일부터 <b>쿠팡·네이버플러스스토어</b> 등 대규모 온라인몰로 확대됐습니다. 라면·우유·샴푸 등 114개 생활필수품은 100g·100mL 기준 가격을 표시해야 해요. 이 계산기는 그 기준으로 직접 비교합니다.</p>
+    </div>
+  </section>
+
+  <section class="section" id="checker">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 1</p>
+        <h2 class="section__title">단품 A vs <em>묶음 B</em></h2>
+        <p class="section__desc">가격은 <b>배송비 포함 실제 결제액</b>으로 넣으세요. 1+1·2+1은 프로모션을 고르면 총 수량이 자동으로 늘어납니다.</p>
+      </div>
+
+      <div class="fgrid fgrid--3" style="margin-bottom:14px">
+        <div class="field field--full">
+          <span class="field__label">비교 단위</span>
+          <div class="seg seg--fill" id="unitSeg" role="group" aria-label="비교 단위">
+            <button class="seg__btn is-on" type="button" data-unit="g" aria-pressed="true">g<small>식품·분말</small></button>
+            <button class="seg__btn" type="button" data-unit="mL" aria-pressed="false">mL<small>음료·세제</small></button>
+            <button class="seg__btn" type="button" data-unit="ea" aria-pressed="false">개<small>생활용품</small></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="presets">
+        <span class="presets__label">예시로 보기</span>
+        <button class="preset" type="button" data-preset="trap">1+1 함정</button>
+        <button class="preset" type="button" data-preset="deal">대용량 이득</button>
+        <button class="preset" type="button" data-preset="multi">3+1 묶음</button>
+      </div>
+
+      <div class="form-stack">
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🅰️</span>
+            <h3 class="fcard__title">상품 A · 단품</h3>
+            <span class="fcard__note">기준</span>
+          </div>
+          <div class="fgrid">
+            <label class="field field--full">
+              <span class="field__label">상품명</span>
+              <span class="input-wrap"><input class="input" id="a-name" type="text" placeholder="예: 우유 900mL" autocomplete="off"></span>
+            </label>
+            <label class="field">
+              <span class="field__label">가격</span>
+              <span class="input-wrap"><input class="input" id="a-price" type="number" inputmode="numeric" min="0" step="10" placeholder="예: 2,400" autocomplete="off"><span class="input__unit">원</span></span>
+            </label>
+            <label class="field">
+              <span class="field__label">1개 용량</span>
+              <span class="input-wrap"><input class="input" id="a-size" type="number" inputmode="decimal" min="0" step="1" placeholder="예: 900" autocomplete="off"><span class="input__unit js-unit">mL</span></span>
+            </label>
+            <label class="field">
+              <span class="field__label">수량</span>
+              <span class="input-wrap"><input class="input" id="a-qty" type="number" inputmode="numeric" min="1" step="1" value="1" autocomplete="off"><span class="input__unit">개</span></span>
+            </label>
+          </div>
+          <div class="field" style="margin-top:12px">
+            <span class="field__label">프로모션</span>
+            <div class="seg seg--fill" id="aPromo" role="group" aria-label="상품 A 프로모션">
+              <button class="seg__btn is-on" type="button" data-promo="1" aria-pressed="true">없음</button>
+              <button class="seg__btn" type="button" data-promo="2" aria-pressed="false">1+1</button>
+              <button class="seg__btn" type="button" data-promo="3" aria-pressed="false">2+1</button>
+              <button class="seg__btn" type="button" data-promo="4" aria-pressed="false">3+1</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🅱️</span>
+            <h3 class="fcard__title">상품 B · 묶음·대용량</h3>
+            <span class="fcard__note">비교 대상</span>
+          </div>
+          <div class="fgrid">
+            <label class="field field--full">
+              <span class="field__label">상품명</span>
+              <span class="input-wrap"><input class="input" id="b-name" type="text" placeholder="예: 우유 500mL 1+1" autocomplete="off"></span>
+            </label>
+            <label class="field">
+              <span class="field__label">가격</span>
+              <span class="input-wrap"><input class="input" id="b-price" type="number" inputmode="numeric" min="0" step="10" placeholder="예: 2,900" autocomplete="off"><span class="input__unit">원</span></span>
+            </label>
+            <label class="field">
+              <span class="field__label">1개 용량</span>
+              <span class="input-wrap"><input class="input" id="b-size" type="number" inputmode="decimal" min="0" step="1" placeholder="예: 500" autocomplete="off"><span class="input__unit js-unit">mL</span></span>
+            </label>
+            <label class="field">
+              <span class="field__label">수량</span>
+              <span class="input-wrap"><input class="input" id="b-qty" type="number" inputmode="numeric" min="1" step="1" value="1" autocomplete="off"><span class="input__unit">개</span></span>
+            </label>
+          </div>
+          <div class="field" style="margin-top:12px">
+            <span class="field__label">프로모션</span>
+            <div class="seg seg--fill" id="bPromo" role="group" aria-label="상품 B 프로모션">
+              <button class="seg__btn is-on" type="button" data-promo="1" aria-pressed="true">없음</button>
+              <button class="seg__btn" type="button" data-promo="2" aria-pressed="false">1+1</button>
+              <button class="seg__btn" type="button" data-promo="3" aria-pressed="false">2+1</button>
+              <button class="seg__btn" type="button" data-promo="4" aria-pressed="false">3+1</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actionbar is-on">
+        <div class="container actionbar__inner">
+          <div class="actionbar__count">
+            <span id="countText">가격·용량을 넣으면 자동 계산</span>
+            <span class="actionbar__hint" id="countHint">B가 진짜 싼지 판정해 드려요</span>
+          </div>
+          <div class="actionbar__btns">
+            <button class="btn btn--ghost" type="button" id="resetBtn">초기화</button>
+            <button class="btn btn--primary" type="button" id="analyzeBtn" aria-controls="result">
+              <span>단가 비교</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <noscript><p class="noscript">이 계산기는 자바스크립트로 동작해요. 브라우저에서 자바스크립트를 켜주세요.</p></noscript>
+    </div>
+  </section>
+
+  <section class="section section--result" id="result" hidden>
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 2</p>
+        <h2 class="section__title">100g당 진짜 단가</h2>
+        <p class="section__desc" id="resultSub"></p>
+      </div>
+
+      <div id="verdictBox" aria-live="polite"></div>
+
+      <div class="summary" id="summaryBox"></div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">📊 100g당 단가 비교</h3></div>
+        <p class="block__desc">막대가 짧을수록 100g당 가격이 낮습니다. <b>총 용량이 다르면 총액 비교는 의미가 없어요.</b></p>
+        <div class="loads" id="barList"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🧾 상세 비교</h3></div>
+        <div class="table-wrap">
+          <table class="cmp">
+            <thead><tr><th scope="col">항목</th><th scope="col">상품 A</th><th scope="col">상품 B</th></tr></thead>
+            <tbody id="cmpBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">💰 같은 양을 살 때 얼마 차이</h3></div>
+        <div class="metrics" id="moneyMetrics"></div>
+        <div class="note-box" id="moneyNote"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🔍 1+1·대용량의 함정</h3></div>
+        <div class="plan" id="trapList"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🧮 계산식</h3></div>
+        <div class="formula">
+          총 수량 = <code>수량 × 프로모션 배수</code> (1+1 = ×2, 3+1 = ×4)<br>
+          총 용량 = <code>1개 용량 × 총 수량</code><br>
+          100g당 = <code>가격 ÷ 총 용량 × 100</code><br>
+          개당 = <code>가격 ÷ 총 수량</code>
+        </div>
+      </div>
+
+      <div class="result-foot">
+        <button class="btn btn--ghost" type="button" id="copyBtn">결과 복사</button>
+        <button class="btn btn--ghost" type="button" id="editBtn">다시 입력</button>
+      </div>
+
+      <div class="note-box">
+        <b>참고</b> — 이 계산기는 가격·용량·수량만 비교합니다. <b>품질·원산지·유통기한·배송비·쿠폰</b>은 반영하지 않습니다. g과 mL는 비중이 다르므로 <b>같은 단위끼리만</b> 비교하세요(물은 1mL≈1g, 기름·세제는 다름).
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">FAQ</p>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>100g당 단가가 왜 기준인가요?</summary>
+          <p>용량이 다르면 총액 비교가 불가능하기 때문입니다. 500g에 5,000원과 1kg에 8,000원은 100g당 <b>1,000원 vs 800원</b>으로, 대용량이 20% 저렴하다는 게 한눈에 보입니다. 정부 단위가격표시제도 같은 이유로 100g·100mL 기준을 씁니다.</p>
+        </details>
+        <details>
+          <summary>1+1인데 더 비쌀 수 있나요?</summary>
+          <p>있습니다. 1+1은 <b>단품 대비 용량이 줄어든 상태</b>로 나오는 경우가 많아요. 예: 단품 900mL 2,400원(267원/100mL) vs 1+1 500mL 2,900원(290원/100mL). 개수가 2배라 싸 보이지만 100mL당으로는 8.6% 비쌉니다.</p>
+        </details>
+        <details>
+          <summary>개당 가격과 100g당 가격 중 뭘 봐야 하나요?</summary>
+          <p>같은 상품(같은 용량)이면 <b>개당</b>으로 충분합니다. 용량이 다른데 개당만 보면 속습니다. <b>내용량이 다르면 100g당</b>, 같은 내용량이면 개당을 보세요.</p>
+        </details>
+        <details>
+          <summary>g과 mL를 같이 비교해도 되나요?</summary>
+          <p>안 됩니다. 물은 1mL≈1g이지만 기름·세제·샴푸는 비중이 달라 1mL가 1g이 아닙니다. <b>같은 단위끼리만</b> 비교하고, 표기가 다르면 제품 정보의 내용량 단위를 통일해서 넣으세요.</p>
+        </details>
+        <details>
+          <summary>대용량이 싸면 무조건 사는 게 좋나요?</summary>
+          <p>아니요. <b>다 먹을 수 있는 양</b>인지, 유통기한이 남았는지, 보관 공간이 있는지를 함께 보세요. 못 먹고 버리면 100g당 단가가 아무리 싸도 손해입니다. 특히 1+1은 유통기한 임박 재고인 경우가 있습니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--lab">
+    <div class="container container--narrow lab">
+      <div class="lab__badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.6 17a3 3 0 0 0 2.7 4.4h7.4A3 3 0 0 0 18.4 17L14 8.2V3"/><path d="M7.2 14h9.6"/></svg>
+      </div>
+      <div>
+        <h2>팩트체크 건강연구소는</h2>
+        <p>광고·협찬을 받지 않고, 공개된 논문과 성분표·가격표만 해부합니다. 직접 겪은 감량 기록도 함께 올려요. 장볼 때 “1+1”에 속지 않으려고 만든 계산기입니다.</p>
+        <div class="lab__links">
+          <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">네이버 블로그</a>
+          <a href="https://www.instagram.com/factcheck_denny/" target="_blank" rel="noopener">인스타그램</a>
+          <a href="https://www.threads.net/@factcheck_denny" target="_blank" rel="noopener">스레드</a>
+          <a href="https://hjh7085-bit.github.io/link/">체크기 허브</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="block" style="margin-top:0">
+        <div class="block__head"><h3 class="block__title">🧰 함께 쓰면 좋은 체크기</h3></div>
+        <div class="tool-links">
+          <a class="tool-link" href="https://hjh7085-bit.github.io/pill-cost/">
+            <span class="tool-link__icon" aria-hidden="true">💰</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">영양제 툴</span>
+              <span class="tool-link__title">영양제 1알 단가 비교기</span>
+              <span class="tool-link__meta">1일 유지비·성분 1,000mg당</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/customs-calc/">
+            <span class="tool-link__icon" aria-hidden="true">📦</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">웹툴 2호</span>
+              <span class="tool-link__title">해외직구 6병·관세 컷 계산기</span>
+              <span class="tool-link__meta">직구 총비용 계산</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/link/">
+            <span class="tool-link__icon" aria-hidden="true">🔗</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">허브</span>
+              <span class="tool-link__title">체크기 · 칼럼 · SNS 한 번에</span>
+              <span class="tool-link__meta">팩트체크 건강연구소 링크</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <strong>팩트체크 건강연구소</strong>
+      <p>문헌 기반 참고용이며, 질환의 진단·치료를 대신하지 않습니다.</p>
+    </div>
+    <div class="site-footer__meta">
+      <nav class="site-footer__links" aria-label="사이트 정보"><a href="../link/">웹툴 60종</a><a href="../about.html">소개</a><a href="../privacy.html">개인정보처리방침</a></nav>
+      <p>© <span id="year">2026</span> Fact-check Health Lab · 무료 웹툴</p>
+      <p class="site-footer__notice">본 페이지는 의료 행위가 아닌 정보 제공 도구입니다. 응급 상황에서는 119 또는 가까운 응급실을 이용하세요.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

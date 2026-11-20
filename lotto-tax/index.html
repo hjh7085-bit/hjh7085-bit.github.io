@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>로또·연금복권 세후 실수령액 계산기 | 팩트체크 건강연구소</title>
+<meta name="description" content="로또 6/45와 연금복권 720+ 당첨금의 세금과 실수령액을 계산합니다. 3억원 이하 22%, 3억원 초과 33%의 분리과세와 연금복권 20년 분할 수령, 기부금·분할 지급까지 반영합니다.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="팩트체크 건강연구소 Denny">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/favicon.svg">
+<link rel="canonical" href="https://hjh7085-bit.github.io/lotto-tax/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/lotto-tax/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="로또·연금복권 세후 실수령액 계산기">
+<meta property="og:description" content="로또 1등 20억이면 세금 떼고 얼마? 연금복권 월 700만원은? 실수령액을 바로 계산합니다.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/assets/og-cover.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="로또·연금복권 세후 실수령액 계산기">
+<meta name="twitter:description" content="로또 1등 20억이면 세금 떼고 얼마? 연금복권 월 700만원은? 실수령액을 바로 계산합니다.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/assets/og-cover.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/tool.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "로또·연금복권 세후 실수령액 계산기",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "url": "https://hjh7085-bit.github.io/lotto-tax/",
+      "description": "로또 6/45와 연금복권 720+ 당첨금의 세금과 실수령액을 계산합니다. 3억원 이하 22%, 3억원 초과 33%의 분리과세와 연금복권 20년 분할 수령, 기부금·분할 지급까지 반영합니다.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "팩트체크 건강연구소"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "로또 1등 20억이면 세금 떼고 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "약 13억 9,700만원입니다. 3억원까지 22%(6,600만원) + 17억원에 33%(5억 6,100만원) = 6억 2,700만원을 냅니다. 실수령률은 69.9%입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "연금복권 월 700만원은 세후 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "22%를 원천징수해 월 546만원을 20년간 받습니다. 총 13억 1,040만원으로, 같은 금액을 일시금으로 받는 것보다 세금 부담이 분산됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "당첨금에 건강보험료가 붙나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "붙지 않습니다. 복권 당첨금은 소득으로 잡히지 않아 건보료·종합소득세에 영향이 없습니다. 다만 당첨금을 예금·부동산으로 굴리면 이자·임대소득이 발생해 금융소득이 잡힙니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "당첨금을 가족에게 나누면 세금이 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "증여세가 발생합니다. 배우자 6억, 성인 자녀 5,000만원 공제를 넘으면 신고 대상입니다. 공동구매라면 구매 전 지분 비율을 문서로 남겨야 증여로 보지 않습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "200만원 이하는 정말 비과세인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 기타소득 중 복권 당첨금은 200만원 이하 비과세입니다. 5등(5,000원)·4등(5만원)은 물론, 3등(150만원)도 세금이 없습니다."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "웹툴 100종",
+          "item": "https://hjh7085-bit.github.io/link/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "로또·연금복권 세후 실수령액 계산기",
+          "item": "https://hjh7085-bit.github.io/lotto-tax/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-bar" data-tool="money">
+<a class="skip-link" href="#tool">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="../link/" aria-label="팩트체크 건강연구소 링크 허브">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5c3.6 4 6.2 7 6.2 10.2A6.2 6.2 0 0 1 5.8 13.7C5.8 10.5 8.4 7.5 12 3.5Z"/>
+          <path d="M9.6 14.4c.2 1.4 1.1 2.3 2.4 2.5"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>팩트체크 건강연구소</strong>
+        <small>Free Web Tools</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#tool">계산하기</a>
+      <a href="#guide">원리·사용법</a>
+      <a href="#faq">FAQ</a>
+      <a href="../link/">웹툴 100종</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>웹툴 93호 · 생활·가정</p>
+      <h1 class="hero__title">당첨금 <em>세금</em>,<br>얼마 떼일까?</h1>
+      <p class="hero__sub">복권 당첨금은 <b>기타소득</b>으로 분리과세됩니다. 3억원을 기준으로 세율이 22%와 33%로 갈립니다.</p>
+      <ul class="hero__legend" aria-label="표시 안내">
+        <li><span class="chip chip--green">🟢 22%</span> 3억 이하</li><li><span class="chip chip--yellow">🟡 33%</span> 3억 초과</li><li><span class="chip chip--red">🔴 실수령</span> 통장 입금</li>
+      </ul>
+
+      <div class="hero__stats">
+        <div><strong>22%</strong><span>3억 이하</span></div>
+        <div><strong>33%</strong><span>3억 초과</span></div>
+        <div><strong>20년</strong><span>연금복권</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="notice">
+    <div class="container notice__inner">
+      <span class="notice__icon" aria-hidden="true">🎰</span>
+      <p>복권 당첨금은 <b>분리과세</b>로 다른 소득과 합산되지 않습니다. 세율은 소득세 20%(3억 초과분 30%) + 지방소득세 2%(3%)이며, 당첨금에서 원천징수된 뒤 지급됩니다.</p>
+    </div>
+  </section>
+  <section class="section" id="tool">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 1</p>
+        <h2 class="section__title">당첨금을 넣으세요</h2>
+        <p class="section__desc">연금복권은 월 지급액을 넣고 기간(20년)을 확인하세요.</p>
+      </div>
+
+      <div class="form-stack">
+<div class="fcard"><div class="fcard__head"><span class="fcard__icon" aria-hidden="true">🎰</span><h3 class="fcard__title">당첨 정보</h3></div><div class="fgrid"><div class="field field--full" data-seg-group="kind"><span class="field__label">복권 종류</span><br><div class="seg seg--wrap" role="group" aria-label="복권 종류"><button class="seg__btn is-on" type="button" data-seg="kind" data-val="lotto" aria-pressed="true">로또 6/45</button><button class="seg__btn" type="button" data-seg="kind" data-val="pension" aria-pressed="false">연금복권 720+</button></div></div><label class="field" for="amount"><span class="field__label">당첨금</span><span class="input-wrap"><input class="input" id="amount" type="number" inputmode="decimal" step="100" value="200000" placeholder="예: 200000" autocomplete="off"><span class="input__unit">만원</span></span><span class="field__hint">로또는 총 당첨금</span></label><label class="field" for="years"><span class="field__label">연금 수령 기간</span><span class="input-wrap"><input class="input" id="years" type="number" inputmode="decimal" step="1" value="20" placeholder="예: 20" autocomplete="off"><span class="input__unit">년</span></span><span class="field__hint">연금복권은 20년</span></label><label class="field" for="donate"><span class="field__label">기부 금액</span><span class="input-wrap"><input class="input" id="donate" type="number" inputmode="decimal" step="10" value="0" placeholder="예: 0" autocomplete="off"><span class="input__unit">만원</span></span><span class="field__hint">당첨금 중 기부</span></label></div></div>
+      </div>
+      <div class="presets" style="margin:16px 0 0">
+        <span class="presets__label">예시로 보기</span>
+        <button class="preset" type="button" data-preset="로또 1등 20억">로또 1등 20억</button><button class="preset" type="button" data-preset="로또 2등 5천만">로또 2등 5천만</button><button class="preset" type="button" data-preset="연금복권 월 700만">연금복권 월 700만</button>
+      </div>
+
+      <div class="actionbar is-on">
+        <div class="container actionbar__inner">
+          <div class="actionbar__count">
+            <span id="countText">당첨금을 넣으면 자동 계산</span>
+            <span class="actionbar__hint" id="countHint">연금복권은 월 지급액 기준으로 계산합니다</span>
+          </div>
+          <div class="actionbar__btns">
+            <button class="btn btn--ghost" type="button" id="resetBtn">초기화</button>
+            <button class="btn btn--primary" type="button" id="analyzeBtn" aria-controls="result">
+              <span>세후 계산하기</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="noscript">이 계산기는 자바스크립트로 동작해요. 브라우저에서 자바스크립트를 켜주세요.</p>
+      </noscript>
+    </div>
+  </section>
+  <section class="section section--result" id="result" hidden>
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 2</p>
+        <h2 class="section__title">세금과 실수령액</h2>
+        <p class="section__desc" id="resultSub">원천징수 후 실제로 받는 금액입니다.</p>
+      </div>
+
+      <div id="out" aria-live="polite"></div>
+
+      <div class="result-foot">
+        <button class="btn btn--ghost" type="button" id="copyBtn">결과 복사</button>
+        <button class="btn btn--ghost" type="button" id="editBtn">수치 다시 넣기</button>
+      </div>
+
+      <div class="note-box">2026년 소득세법 기준입니다. 3억원 이하 22%(소득세 20% + 지방세 2%), 3억원 초과분 33%(30% + 3%)가 적용되며, 200만원 이하는 비과세입니다. 당첨금 분할 지급·가족 분배 시 증여세가 별도로 발생할 수 있습니다.</div>
+    </div>
+  </section>
+  <section class="section" id="guide">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">GUIDE</p>
+        <h2 class="section__title">복권 당첨금 세금 구조</h2>
+        <p class="section__desc">분리과세와 연금복권 계산법을 정리했습니다.</p>
+      </div>
+      <div class="guide">
+<div class="gcard"><h3 class="gcard__title"><span>01</span> 3억원이 경계선</h3><div class="gcard__body"><table><thead><tr><th>당첨금</th><th>세율</th><th>실수령</th></tr></thead><tbody>
+<tr><td>200만원 이하</td><td>비과세</td><td>전액</td></tr>
+<tr><td>200만원 초과 ~ 3억원</td><td>22%</td><td>78%</td></tr>
+<tr><td>3억원 초과</td><td>3억까지 22% + 초과분 33%</td><td>약 67~78%</td></tr></tbody></table>
+<p>10억원이면 3억×22% = 6,600만원 + 7억×33% = 2억 3,100만원, 합계 2억 9,700만원을 냅니다. 실수령은 7억 300만원입니다.</p></div></div>
+<div class="gcard"><h3 class="gcard__title"><span>02</span> 연금복권 720+</h3><div class="gcard__body"><p>연금복권은 1등이 <b>월 700만원 × 20년</b>입니다. 총 16억 8,000만원이지만, 매월 나눠 받습니다.</p>
+<ul><li>세금 22%를 원천징수해 월 546만원을 받습니다.</li>
+<li>총 세후 수령액은 13억 1,040만원입니다.</li>
+<li>2등은 월 100만원 × 10년입니다.</li>
+<li>분리과세라 다른 소득과 합산되지 않습니다.</li></ul></div></div>
+<div class="gcard"><h3 class="gcard__title"><span>03</span> 당첨 후 주의할 점</h3><div class="gcard__body"><ul><li><b>신분 노출</b>: 당첨 사실을 SNS에 올리면 사기·협박 대상이 됩니다.</li>
+<li><b>지급 기한</b>: 로또는 당첨일(추첨일)부터 <b>1년</b>입니다. 지나면 소멸합니다.</li>
+<li><b>수령 장소</b>: 5만원 이하는 판매점, 5만원~3억원은 은행, 3억원 초과는 NH농협 본점입니다.</li>
+<li><b>가족 분배</b>: 증여세 문제가 생기므로 미리 세무 상담을 받으세요.</li>
+<li>3억원 초과 수령 시 신분 확인과 세금 납부 확인 절차가 있습니다.</li></ul></div></div>
+<div class="gcard"><h3 class="gcard__title"><span>04</span> 당첨금 수령 절차</h3><div class="gcard__body"><p>금액에 따라 받는 곳이 다르고, 준비물도 다릅니다.</p>
+<ul><li><b>5만원 이하</b>: 판매점에서 즉시 수령.</li>
+<li><b>5만원 초과~3억원</b>: NH농협은행 지점(신분증 지참).</li>
+<li><b>3억원 초과</b>: NH농협은행 본점(서울). 신분증·통장 필요.</li>
+<li><b>기한</b>: 추첨일부터 1년. 지나면 지급되지 않습니다.</li>
+<li>복권 뒷면에 서명해 두면 분실·도난 시 보호받을 수 있습니다.</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">FAQ</p>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>로또 1등 20억이면 세금 떼고 얼마인가요?</summary>
+          <p><b>약 13억 9,700만원</b>입니다. 3억원까지 22%(6,600만원) + 17억원에 33%(5억 6,100만원) = 6억 2,700만원을 냅니다. 실수령률은 69.9%입니다.</p>
+        </details>
+        <details>
+          <summary>연금복권 월 700만원은 세후 얼마인가요?</summary>
+          <p>22%를 원천징수해 <b>월 546만원</b>을 20년간 받습니다. 총 13억 1,040만원으로, 같은 금액을 일시금으로 받는 것보다 세금 부담이 분산됩니다.</p>
+        </details>
+        <details>
+          <summary>당첨금에 건강보험료가 붙나요?</summary>
+          <p>붙지 않습니다. 복권 당첨금은 소득으로 잡히지 않아 건보료·종합소득세에 영향이 없습니다. 다만 당첨금을 예금·부동산으로 굴리면 이자·임대소득이 발생해 금융소득이 잡힙니다.</p>
+        </details>
+        <details>
+          <summary>당첨금을 가족에게 나누면 세금이 있나요?</summary>
+          <p>증여세가 발생합니다. 배우자 6억, 성인 자녀 5,000만원 공제를 넘으면 신고 대상입니다. 공동구매라면 구매 전 지분 비율을 문서로 남겨야 증여로 보지 않습니다.</p>
+        </details>
+        <details>
+          <summary>200만원 이하는 정말 비과세인가요?</summary>
+          <p>네. 기타소득 중 복권 당첨금은 200만원 이하 비과세입니다. 5등(5,000원)·4등(5만원)은 물론, 3등(150만원)도 세금이 없습니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="section section--related">
+    <div class="container">
+      <div class="block__head"><h3 class="block__title">🧰 함께 쓰면 좋은 웹툴</h3></div>
+      <div class="tool-links">
+<a class="tool-link" href="../dutch-pay/">
+            <span class="tool-link__icon" aria-hidden="true">🧾</span>
+            <span class="tool-link__body"><span class="tool-link__num">웹툴</span><span class="tool-link__title">더치페이·회비 정산기</span><span class="tool-link__meta">차등 분담</span></span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="../percent-calc/">
+            <span class="tool-link__icon" aria-hidden="true">％</span>
+            <span class="tool-link__body"><span class="tool-link__num">웹툴</span><span class="tool-link__title">퍼센트 계산기</span><span class="tool-link__meta">할인·증감</span></span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="../deposit-interest/">
+            <span class="tool-link__icon" aria-hidden="true">🏦</span>
+            <span class="tool-link__body"><span class="tool-link__num">웹툴</span><span class="tool-link__title">예금·적금 이자 계산기</span><span class="tool-link__meta">세후 이자</span></span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <strong>팩트체크 건강연구소 · Denny</strong>
+      <p>논문과 공개 기준만으로 만든 무료 계산기·체크기 100종. 회원가입 없이 브라우저에서 바로 계산합니다.</p>
+    </div>
+    <div class="site-footer__meta">
+      <nav class="site-footer__links" aria-label="사이트 정보">
+        <a href="../link/">웹툴 100종</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+        <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">블로그</a>
+      </nav>
+      <p>© <span id="year">2026</span> Fact-check Health Lab · 무료 웹툴</p>
+      <p class="site-footer__notice">입력한 값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/toolkit.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

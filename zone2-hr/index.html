@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zone 2 지방연소 심박수 계산기 — 나이·안정시 심박수로 5구간 | 팩트체크 건강연구소</title>
+<meta name="description" content="나이와 안정시 심박수만 넣으면 최대심박수 공식(타나카·220−나이)과 카르보넨 공식으로 Zone 1~5 심박수 구간표와 Zone 2 지방연소 최적 bpm을 계산합니다. 말하기 테스트 기준까지.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="canonical" href="./">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/zone2-hr/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="Zone 2 지방연소 심박수 계산기">
+<meta property="og:description" content="Zone 1~5 심박수 구간과 Zone 2 최적 bpm을 두 공식으로. 말은 되고 노래는 힘든 강도.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/zone2-hr/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zone 2 지방연소 심박수 계산기">
+<meta name="twitter:description" content="나이·안정시 심박수 → Zone 1~5 표와 Zone 2 타깃 bpm.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/zone2-hr/assets/og-image.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Zone 2 지방연소 심박수 계산기",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "ko",
+  "description": "최대심박수와 카르보넨 공식으로 Zone 1~5 심박수 구간과 Zone 2 지방연소 범위를 계산하는 무료 웹툴.",
+  "publisher": { "@type": "Organization", "name": "팩트체크 건강연구소" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+}
+</script>
+</head>
+<body data-tool="zone" class="has-bar">
+<a class="skip-link" href="#tool">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="https://hjh7085-bit.github.io/link/" aria-label="팩트체크 건강연구소">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/><path d="M17 3v4M15 5h4"/>
+        </svg>
+      </span>
+      <span class="brand__text"><strong>팩트체크 건강연구소</strong><small>Fact-check Health Lab</small></span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#tool">심박수 계산</a>
+      <a href="#how">구간 활용법</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="https://hjh7085-bit.github.io/link/">웹툴 모음</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>웹툴 12호 · Zone 2 유산소</p>
+      <h1 class="hero__title">지방이 제일 잘 타는<br><em>내 심박수</em></h1>
+      <p class="hero__sub">숨이 차서 못 견디는 운동은 오래 못 합니다. <b>Zone 2</b>는 옆 사람과 대화는 되는데 노래는 힘든 강도. 나이와 안정시 심박수로 <b>Zone 1~5 구간</b>과 <b>지방연소 타깃 bpm</b>을 두 공식으로 계산해 드려요.</p>
+      <div class="hero__meta">
+        <span class="pill">타나카 · 220−나이 병기</span>
+        <span class="pill">카르보넨 <b>+ 안정시</b></span>
+        <span class="pill">말하기 테스트</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool" id="tool">
+    <div class="container tool__grid">
+
+      <div class="tool__col">
+        <div class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">❤️</span>
+            <span class="card__title">내 심박수 정보</span>
+            <span class="card__note" id="hrNote">—</span>
+          </div>
+
+          <div class="fgrid">
+            <div class="field">
+              <label class="field__label" for="age">나이 <span class="opt">세</span></label>
+              <div class="input-wrap">
+                <input class="input" id="age" type="number" inputmode="numeric" min="10" max="100" step="1" value="35">
+                <span class="input__unit">세</span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="rhr">안정시 심박수 <span class="opt">선택</span></label>
+              <div class="input-wrap">
+                <input class="input" id="rhr" type="number" inputmode="numeric" min="30" max="120" step="1" placeholder="예: 68">
+                <span class="input__unit">bpm</span>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label">최대심박수 공식</label>
+              <div class="seg" role="group" aria-label="최대심박수 공식" id="formulaSeg">
+                <button class="seg__btn is-on" type="button" data-formula="tanaka" aria-pressed="true">타나카 208−0.7×나이</button>
+                <button class="seg__btn" type="button" data-formula="classic" aria-pressed="false">220−나이</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="field__hint mt-8">안정시 심박수는 <b>아침에 일어나 누운 채로</b> 잰 값이 가장 정확합니다. 안 넣으면 최대심박수 % 방식으로만 계산합니다.</p>
+
+          <div class="presets mt-8" id="rhrChips">
+            <button class="preset" type="button" data-rhr="55">55 (운동하는 편)</button>
+            <button class="preset" type="button" data-rhr="68">68 (보통)</button>
+            <button class="preset" type="button" data-rhr="80">80 (앉아 지내는 편)</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">🧮</span>
+            <span class="card__title">두 공식의 차이</span>
+          </div>
+          <div class="kv">
+            <div class="kv__row"><span class="kv__k">최대심박수 % 방식</span><span class="kv__v">최대HR × %</span></div>
+            <div class="kv__row"><span class="kv__k">카르보넨(HRR)</span><span class="kv__v">(최대HR−안정HR)×% + 안정HR</span></div>
+            <div class="kv__row"><span class="kv__k">Zone 2 기준</span><span class="kv__v">60~70%</span></div>
+          </div>
+          <p class="field__hint mt-8">카르보넨은 <b>예비 심박수</b>를 쓰기 때문에 안정시 심박수가 낮은 사람(심폐가 좋은 사람)에서 구간이 더 높게 나옵니다. 두 값 사이에서 몸이 편한 쪽을 쓰세요.</p>
+        </div>
+
+        <div class="card" style="background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))">
+          <div class="card__head"><span class="card__icon" aria-hidden="true">🗣️</span><span class="card__title">숫자보다 이게 정확합니다</span></div>
+          <p class="field__hint" style="margin:0"><b>말하기 테스트</b> — 옆 사람과 문장으로 대화는 되지만 노래는 힘든 강도가 Zone 2입니다. 코로만 숨쉬기가 어렵다면 이미 Zone 3입니다.</p>
+        </div>
+      </div>
+
+      <div class="tool__col tool__col--result">
+        <div id="result" class="result" aria-live="polite"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">How to use</p>
+        <h2 class="section__title">Zone 2를 제대로 쓰는 4가지</h2>
+        <p class="section__lead">같은 30분이라도 강도를 어디에 두느냐로 효과가 갈립니다.</p>
+      </div>
+      <div class="card">
+        <div class="tips">
+          <div class="tip"><span class="tip__n">1</span><span class="tip__text"><b>주 150분을 목표로.</b> 세계보건기구·미국스포츠의학회 권고는 중강도 유산소 <b>주 150분</b>입니다. 30분씩 5회, 또는 50분씩 3회로 나누면 됩니다.</span></div>
+          <div class="tip"><span class="tip__n">2</span><span class="tip__text"><b>처음 10분은 워밍업.</b> 심박수가 목표에 들어오는 데 보통 5~10분 걸립니다. 목표에 닿은 뒤부터 시간을 세세요.</span></div>
+          <div class="tip"><span class="tip__n">3</span><span class="tip__text"><b>숫자를 쫓지 마세요.</b> 손목 웨어러블 심박수는 운동 중 오차가 5~10bpm 납니다. 존에 들어왔는지'만' 확인하고, 몸의 느낌을 우선하세요.</span></div>
+          <div class="tip"><span class="tip__n">4</span><span class="tip__text"><b>주 1회는 Zone 3~4.</b> Zone 2만 하면 심폐 최대능력(VO₂max)은 잘 안 늘어납니다. 주 1회 20분 인터벌을 섞으면 같은 시간에 더 좋아집니다.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Reality check</p>
+        <h2 class="section__title">'지방만 타는 구간'은 정확히는</h2>
+      </div>
+      <div class="card">
+        <div class="tips">
+          <div class="tip"><span class="tip__n">·</span><span class="tip__text">지방 <b>산화 비율</b>(전체 에너지 중 지방이 차지하는 %)은 중저강도에서 가장 높습니다. 이건 맞습니다.</span></div>
+          <div class="tip"><span class="tip__n">·</span><span class="tip__text">하지만 감량은 <b>총 소비 칼로리와 식사</b>가 결정합니다. Zone 2로 30분 타는 것보다 Zone 3로 30분 타는 게 총 칼로리는 더 많습니다.</span></div>
+          <div class="tip"><span class="tip__n">·</span><span class="tip__text">Zone 2의 진짜 장점은 <b>매일 해도 회복이 되는 강도</b>라는 점입니다. 고강도는 주 2~3회가 한계지만 Zone 2는 거의 매일 가능합니다.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">FAQ</p>
+        <h2 class="section__title">심박수 구간, 이런 게 궁금합니다</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>최대심박수 공식, 어느 걸 써야 하나요?</summary>
+          <div class="faq__body"><b>타나카 공식(208−0.7×나이)</b>이 220−나이보다 실제 측정값에 가깝다고 보고됩니다. 다만 둘 다 표준오차가 ±10bpm 수준이라, 정확히 알려면 트레드밀 최대운동검사가 필요합니다. 일상 운동 계획에는 어느 쪽이든 큰 차이가 없습니다.</div>
+        </details>
+        <details>
+          <summary>Zone 2가 130bpm인데 숨이 편합니다. 너무 낮은 건가요?</summary>
+          <div class="faq__body">심폐가 좋아지면 같은 심박수에서 더 빨리 달릴 수 있어 <b>'느낌'이 가벼워집니다</b>. 말하기 테스트로 대화가 편하면 Zone 2가 맞습니다. 반대로 같은 심박수에서 이미 헐떡이면 그날은 컨디션이 떨어진 것이니 강도를 낮추세요.</div>
+        </details>
+        <details>
+          <summary>고혈압약(베타차단제)을 먹는데 심박수가 안 올라갑니다.</summary>
+          <div class="faq__body">베타차단제는 심박수를 <b>인위적으로 20~30bpm 낮춥니다</b>. 이 계산기의 구간은 맞지 않으니, <b>자각도(말하기 테스트·Borg 11~13)</b>로 강도를 정하고 담당 의사와 상의하세요. 같은 이유로 맥박이 느린 서맥이 있으면 공식 자체가 맞지 않습니다.</div>
+        </details>
+        <details>
+          <summary>마운자로·위고비 복용 중인데 유산소 강도 조절이 필요한가요?</summary>
+          <div class="faq__body">GLP-1 계열은 식사량이 줄어 <b>저혈당·어지럼·탈수</b>가 생기기 쉽습니다. 공복 고강도보다 <b>식후 1~2시간 뒤 Zone 2</b>가 안전하고, 어지러우면 바로 멈추세요. 근육 손실을 막으려면 유산소만 늘리지 말고 <b>단백질 + 저항운동</b>을 함께 넣는 게 중요합니다.</div>
+        </details>
+        <details>
+          <summary>걷기로도 Zone 2가 되나요?</summary>
+          <div class="faq__body">됩니다. 빠르게 걷기(시속 5.5~6.5km)나 경사 걷기는 많은 사람에게 Zone 2입니다. 다만 체력이 좋아지면 걸어서는 심박수가 잘 안 올라가므로 <b>경사·무게 조끼·자전거</b>로 강도를 조절하세요. 무릎이 안 좋으면 실내 자전거가 부담이 적습니다.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="stack">
+        <p class="disclaimer"><b>의학적 면책 안내</b> — 이 계산기는 나이 기반 <b>추정</b> 최대심박수 공식으로 구간을 제시하는 참고용 도구입니다. 실제 최대심박수는 개인차가 ±10bpm 이상이며, 심장질환·고혈압·부정맥이 있거나 혈압약을 복용 중이면 공식이 맞지 않습니다. 운동 중 <b>가슴 통증·실신·비정상적 두근거림</b>이 있으면 즉시 멈추고 진료를 받으세요.</p>
+        <div class="sources">
+          <ul>
+            <li>Tanaka H, et al. Age-predicted maximal heart rate revisited. J Am Coll Cardiol. 2001 — 208−0.7×나이</li>
+            <li>Karvonen MJ, et al. 심박수 예비량(HRR) 기반 운동강도 설정 — 카르보넨 공식</li>
+            <li>ACSM's Guidelines for Exercise Testing and Prescription — 5구간(50/60/70/80/90% HRmax) 및 중강도 150분 권고</li>
+            <li>세계보건기구(WHO) 신체활동 권고 — 주 150~300분 중강도 유산소</li>
+            <li>Achten J, Jeukendrup AE. Maximal fat oxidation during exercise — 지방 산화 최대 강도 연구</li>
+          </ul>
+          <p class="sources__note">자료 확인일 2026-11-15. 구간 경계는 기관마다 5%p 차이가 있을 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="actionbar">
+  <div class="actionbar__inner">
+    <button class="btn btn--primary btn--lg" type="button" id="calcBar">내 구간 계산하기</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand"><strong>팩트체크 건강연구소</strong><small>Fact-check Health Lab · 웹툴 12호</small></div>
+    <p class="site-footer__notice">나이 기반 추정 최대심박수로 계산한 참고용 구간입니다. 심장질환이 있으면 의사와 상의하세요.</p>
+    <nav class="site-footer__links" aria-label="관련 링크">
+      <a href="https://hjh7085-bit.github.io/link/">웹툴 모음</a>
+      <a href="https://hjh7085-bit.github.io/metabolic-calc/">대사 진단</a>
+      <a href="https://hjh7085-bit.github.io/knee-load/">무릎 부하</a>
+      <a href="https://hjh7085-bit.github.io/sleep-calc/">수면 사이클</a>
+      <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">블로그</a>
+      <a href="https://www.threads.net/@factcheck_denny" target="_blank" rel="noopener">스레드</a>
+      <a href="https://www.instagram.com/factcheck_denny/" target="_blank" rel="noopener">인스타</a>
+    
+      <a href="../about.html">소개</a>
+      <a href="../privacy.html">개인정보</a>
+    </nav>
+    <p class="site-footer__meta">© 2026 팩트체크 건강연구소 · 기준일 2026-11-15</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# 광고 크롤러
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://hjh7085-bit.github.io/sitemap.xml

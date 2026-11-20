@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>공복혈당·당화혈색소(HbA1c) 환산 & 스파이크 체크기 | 팩트체크 건강연구소</title>
+<meta name="description" content="공복혈당·식후 2시간 혈당·당화혈색소(HbA1c) 중 하나만 넣어도 정상/전당뇨/당뇨 의심 구간을 판정하고, HbA1c↔3개월 평균혈당(eAG)을 자동 환산합니다. 중성지방/HDL 비율로 인슐린 저항성 참고 지수까지. 대한당뇨병학회·ADA 기준, 문헌 기반 참고용.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="canonical" href="./">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/glucose-lab/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="공복혈당·당화혈색소 환산 & 스파이크 체크기">
+<meta property="og:description" content="HbA1c 하나만 넣어도 3개월 평균혈당과 당뇨 구간이 보입니다. TG/HDL 인슐린 저항성 지수와 혈당 스파이크 컷 루틴까지.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/glucose-lab/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="공복혈당·당화혈색소 환산 & 스파이크 체크기">
+<meta name="twitter:description" content="공복혈당·HbA1c 상호 환산 + TG/HDL 인슐린 저항성 참고 지수.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/glucose-lab/assets/og-image.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "공복혈당·당화혈색소(HbA1c) 환산 & 스파이크 체크기",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "description": "공복혈당, 식후 2시간 혈당, 당화혈색소(HbA1c) 중 하나만 입력해도 정상·전당뇨·당뇨 의심 구간을 판정하고 HbA1c와 3개월 평균혈당(eAG)을 상호 환산하며, 중성지방/HDL 비율로 인슐린 저항성 참고 지수를 계산하는 무료 웹툴.",
+      "publisher": { "@type": "Organization", "name": "팩트체크 건강연구소" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "공복혈당과 당화혈색소 중 무엇이 더 정확한가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "둘은 보는 기간이 다릅니다. 공복혈당은 그날의 상태(전날 식사·수면·스트레스)에 흔들리고, 당화혈색소는 최근 2~3개월 평균을 반영합니다. 그래서 대한당뇨병학회도 공복혈당만으로 판단하지 말고 당화혈색소를 함께 보도록 권합니다. 두 수치가 크게 어긋나면 빈혈·혈색소 이상·급격한 혈당 변화를 의심해 정밀검사가 필요합니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "당화혈색소 6.0%면 당뇨인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 5.7~6.4%는 당뇨병전단계(당뇨 고위험군)이고, 6.5% 이상이 당뇨병 진단 기준입니다. 다만 진단은 같은 검사를 반복하거나 다른 기준을 함께 확인해 확진하며, 이 페이지의 판정은 참고용입니다. 전단계라도 5~7% 감량과 주 150분 운동으로 당뇨 발생 위험을 크게 낮출 수 있습니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "TG/HDL 비율이 높으면 인슐린 저항성인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "참고 지표일 뿐 진단이 아닙니다. 중성지방이 높고 HDL이 낮은 조합은 인슐린 저항성과 관련이 깊지만, 컷오프 값이 연구마다 2.0~4.0으로 다르고 인종·성별 차이도 큽니다. 확진은 공복 인슐린·HOMA-IR이나 의사의 판단이 필요합니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "식후 15분 걷기가 정말 혈당에 도움이 되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "식후 근육이 포도당을 가져다 쓰기 때문에 식후 걷기는 식전이나 몇 시간 뒤 걷기보다 식후 혈당 상승폭을 줄이는 데 효과적이라는 연구가 여러 건 있습니다. 특히 식사 후 15~30분 이내에 10~20분 걷는 방식이 실천하기 쉽습니다. 다만 약을 쓰는 경우 저혈당이 올 수 있어 식후 혈당을 확인하며 하세요." }
+        },
+        {
+          "@type": "Question",
+          "name": "이 수치로 약을 조절해도 되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "절대 안 됩니다. 이 체크기는 공개된 진단 기준과 환산식을 정리한 참고 도구입니다. 인슐린·경구혈당강하제의 용량 변경은 저혈당 위험이 있어 반드시 처방 의사와 상담해야 합니다." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="has-bar">
+<a class="skip-link" href="#checker">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="https://hjh7085-bit.github.io/link/" aria-label="팩트체크 건강연구소 링크 허브">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5c3.6 4 6.2 7 6.2 10.2A6.2 6.2 0 0 1 5.8 13.7C5.8 10.5 8.4 7.5 12 3.5Z"/>
+          <path d="M9.6 14.4c.2 1.4 1.1 2.3 2.4 2.5"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>팩트체크 건강연구소</strong>
+        <small>Fact-check Health Lab</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#checker">혈당 체크</a>
+      <a href="#columns">연구소 칼럼</a>
+      <a href="https://hjh7085-bit.github.io/metabolic-calc/">대사 진단기</a>
+      <a href="https://hjh7085-bit.github.io/factcheck-lab/">중복 체크기</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>팩트체크 건강연구소 · 웹툴 4호</p>
+      <h1 class="hero__title">공복혈당 · 당화혈색소<br><em>환산 &amp; 스파이크</em> 체크</h1>
+      <p class="hero__sub">건강검진 결과지에 <b>공복혈당</b>만 있든 <b>당화혈색소(HbA1c)</b>만 있든, 하나만 넣으면 나머지를 환산해 드려요. <b>정상·전당뇨·당뇨 의심</b> 구간 판정, 3개월 평균혈당, <b>TG/HDL 인슐린 저항성 참고 지수</b>까지 한 번에.</p>
+
+      <ul class="hero__legend" aria-label="판정 표시 안내">
+        <li><span class="chip chip--green">🟢 정상</span> 공복 100 미만</li>
+        <li><span class="chip chip--amber">🟡 전당뇨</span> 100~125</li>
+        <li><span class="chip chip--red">🔴 당뇨 의심</span> 126 이상</li>
+      </ul>
+
+      <div class="hero__stats">
+        <div><strong>3초</strong><span>환산 시간</span></div>
+        <div><strong>2가지</strong><span>입력 경로</span></div>
+        <div><strong>ADA</strong><span>·학회 기준</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="container notice__inner">
+      <span class="notice__icon" aria-hidden="true">⚕️</span>
+      <p><b>참고용 안내</b> — 이 체크기는 대한당뇨병학회·미국당뇨병학회(ADA)의 공개 진단 기준과 검증된 환산식을 정리한 <b>참고 도구</b>이며 진단이 아닙니다. 진단은 병원 정맥혈 검사로 확진하며, 수치가 기준을 넘으면 내과 진료와 정밀검사를 받으세요.</p>
+    </div>
+  </section>
+
+  <section class="section" id="checker">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 1</p>
+        <h2 class="section__title">결과지에 있는 숫자 <em>하나만</em> 넣어도 됩니다</h2>
+        <p class="section__desc">공복혈당·당화혈색소 중 하나만 있으면 판정과 환산이 가능해요. 둘 다 있으면 서로 맞는지까지 검사합니다.</p>
+      </div>
+
+      <div class="form-stack">
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🩸</span>
+            <h3 class="fcard__title">혈당 수치</h3>
+            <span class="fcard__note">공복혈당 or HbA1c</span>
+          </div>
+          <div class="fgrid">
+            <label class="field">
+              <span class="field__label">공복혈당</span>
+              <span class="input-wrap">
+                <input class="input" id="fpg" type="number" inputmode="numeric" min="40" max="600" step="1" placeholder="예: 102" autocomplete="off">
+                <span class="input__unit">mg/dL</span>
+              </span>
+              <span class="field__hint">8시간 이상 공복 기준</span>
+            </label>
+            <label class="field">
+              <span class="field__label">식후 2시간 <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="pp2" type="number" inputmode="numeric" min="40" max="600" step="1" placeholder="예: 148" autocomplete="off">
+                <span class="input__unit">mg/dL</span>
+              </span>
+              <span class="field__hint">식사 시작 2시간 후</span>
+            </label>
+            <label class="field field--full">
+              <span class="field__label">당화혈색소 HbA1c <span class="opt">선택</span></span>
+              <span class="input-wrap">
+                <input class="input" id="a1c" type="number" inputmode="decimal" min="3.5" max="18" step="0.1" placeholder="예: 5.9" autocomplete="off">
+                <span class="input__unit">%</span>
+              </span>
+              <span class="field__hint">최근 2~3개월 평균 반영 · 공복혈당만 있어도 추정해 드려요</span>
+            </label>
+          </div>
+          <div class="presets" style="margin:16px 0 0">
+            <span class="presets__label">예시로 보기</span>
+            <button class="preset" type="button" data-preset="normal">정상 (88 / 5.4)</button>
+            <button class="preset" type="button" data-preset="pre">전당뇨 (108 / 5.9)</button>
+            <button class="preset" type="button" data-preset="dm">당뇨 의심 (132 / 7.1)</button>
+          </div>
+        </div>
+
+        <div class="fcard">
+          <div class="fcard__head">
+            <span class="fcard__icon" aria-hidden="true">🧪</span>
+            <h3 class="fcard__title">지질 지표</h3>
+            <span class="fcard__note">선택</span>
+          </div>
+          <div class="fgrid">
+            <label class="field">
+              <span class="field__label">중성지방 TG</span>
+              <span class="input-wrap">
+                <input class="input" id="tg" type="number" inputmode="numeric" min="20" max="1200" step="1" placeholder="예: 168" autocomplete="off">
+                <span class="input__unit">mg/dL</span>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">HDL 콜레스테롤</span>
+              <span class="input-wrap">
+                <input class="input" id="hdl" type="number" inputmode="numeric" min="10" max="150" step="1" placeholder="예: 42" autocomplete="off">
+                <span class="input__unit">mg/dL</span>
+              </span>
+            </label>
+            <div class="field field--full">
+              <span class="field__hint">둘 다 넣으면 TG/HDL 비율로 인슐린 저항성 참고 지수를 계산합니다. 건강검진 결과지의 '중성지방·HDL' 항목을 보세요.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actionbar is-on">
+        <div class="container actionbar__inner">
+          <div class="actionbar__count">
+            <span id="countText">숫자를 넣으면 자동 계산</span>
+            <span class="actionbar__hint" id="countHint">공복혈당 또는 HbA1c 하나만 있어도 됩니다</span>
+          </div>
+          <div class="actionbar__btns">
+            <button class="btn btn--ghost" type="button" id="resetBtn">초기화</button>
+            <button class="btn btn--primary" type="button" id="analyzeBtn" aria-controls="result">
+              <span>결과 보기</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="noscript">이 체크기는 자바스크립트로 동작해요. 브라우저에서 자바스크립트를 켜주세요.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section section--result" id="result" hidden>
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">STEP 2</p>
+        <h2 class="section__title">혈당 판정 결과</h2>
+        <p class="section__desc" id="resultSub"></p>
+      </div>
+
+      <div id="verdictBox" aria-live="polite"></div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">📏 어느 구간인가요</h3></div>
+        <div id="gaugeArea"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🔄 HbA1c ↔ 3개월 평균혈당</h3></div>
+        <p class="block__desc">당화혈색소 1%는 3개월 평균혈당 약 28.7mg/dL에 해당합니다(ADAG 연구). <b>28.7 × HbA1c − 46.7</b> — 아래 계산기는 내 수치와 별개로 직접 움직여 볼 수 있고, HbA1c를 입력했다면 그 값에서 시작합니다.</p>
+        <div class="card">
+          <div class="fgrid fgrid--2 conv-grid">
+            <div class="field">
+              <span class="field__label">당화혈색소 HbA1c</span>
+              <span class="input-wrap">
+                <input class="input" id="a1cSliderNum" type="number" inputmode="decimal" min="3.5" max="18" step="0.1" value="5.9" aria-label="당화혈색소 수치">
+                <span class="input__unit">%</span>
+              </span>
+            </div>
+            <div class="field">
+              <span class="field__label">3개월 평균혈당 eAG</span>
+              <span class="input-wrap">
+                <input class="input" id="eagNum" type="number" inputmode="numeric" min="40" max="500" step="1" value="123" aria-label="3개월 평균혈당">
+                <span class="input__unit">mg/dL</span>
+              </span>
+              <span class="field__hint" id="eagSub">6.8 mmol/L · 위 칸과 서로 환산됩니다</span>
+            </div>
+          </div>
+          <div class="slider">
+            <input class="range" id="a1cRange" type="range" min="3.5" max="14" step="0.1" value="5.9" aria-label="당화혈색소 슬라이더">
+            <span class="range__scale"><span>3.5%</span><span>5.7</span><span>6.5</span><span>9%</span><span>14%</span></span>
+          </div>
+          <div class="badge-row" id="eagBadges"></div>
+          <div class="note-box" id="eagNote"></div>
+        </div>
+      </div>
+
+      <div class="block" id="lipidBlock" hidden>
+        <div class="block__head"><h3 class="block__title">🧬 TG/HDL 인슐린 저항성 참고 지수</h3></div>
+        <div id="lipidArea"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">🥗 혈당 스파이크 컷 실전 루틴</h3></div>
+        <p class="block__desc">같은 음식도 <b>순서·타이밍·움직임</b>만 바꾸면 식후 혈당 상승폭이 달라집니다. 오늘부터 바로 할 수 있는 것부터.</p>
+        <div class="plan" id="routineList"></div>
+      </div>
+
+      <div class="block" id="adviceBlock" hidden>
+        <div class="block__head"><h3 class="block__title">🏥 다음 단계</h3></div>
+        <div id="adviceArea"></div>
+      </div>
+
+      <div class="block">
+        <div class="block__head"><h3 class="block__title">📚 판정 기준과 근거</h3></div>
+        <div class="card"><div class="rx">
+          <div class="rx__row"><span class="rx__name">정상<span>8시간 이상 공복 정맥혈 기준</span></span><span class="rx__val">공복 &lt;100 · 2시간 &lt;140<small>mg/dL</small></span></div>
+          <div class="rx__row"><span class="rx__name">당뇨병전단계<span>공복혈당장애 100~125 · 내당능장애 140~199</span></span><span class="rx__val">HbA1c 5.7–6.4<small>%</small></span></div>
+          <div class="rx__row"><span class="rx__name">당뇨병 진단 기준<span>증상이 있으면 무작위 200 이상으로 바로 진단</span></span><span class="rx__val">공복 ≥126 · 2시간 ≥200 · A1c ≥6.5</span></div>
+        </div></div>
+        <ul class="src-list">
+          <li>· 대한당뇨병학회, 「2023·2025 당뇨병 진료지침」 — 정상혈당·당뇨병전단계·당뇨병 진단기준.</li>
+          <li>· American Diabetes Association, <em>Standards of Care in Diabetes</em> — 진단 기준 및 식후 혈당 목표(2시간 &lt;180mg/dL).</li>
+          <li>· Nathan DM et al., <em>Diabetes Care</em> 2008 (ADAG): eAG(mg/dL) = 28.7 × HbA1c − 46.7.</li>
+          <li>· TG/HDL 비율 — Kosmas CE et al., <em>Diagnostics</em> 2023; Baneu P et al., <em>Biomedicines</em> 2024 리뷰(컷오프 2.0~4.0, 성별·인종 차이 큼).</li>
+          <li>· 식후 걷기 — 식사 후 10~20분 걷기가 식후 혈당 상승폭을 줄인다는 무작위 연구들. 개인차가 큽니다.</li>
+        </ul>
+      </div>
+
+      <div class="result-foot">
+        <button class="btn btn--ghost" type="button" id="copyBtn">결과 복사</button>
+        <button class="btn btn--ghost" type="button" id="editBtn">수치 다시 넣기</button>
+      </div>
+
+      <div class="note-box">
+        <b>의학적 면책</b> — 이 결과는 공개된 기준과 환산식에 따른 <b>참고용</b>이며 진단 목적이 아닙니다. 당뇨병 진단은 병원 정맥혈 검사로 확진하고, 기준을 넘는 수치가 나오면 내과 진료와 정밀검사(경구당부하검사·인슐린 등)를 권장합니다. 어지럼·식은땀·심한 갈증·체중 감소가 있으면 즉시 진료를 받으세요.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--columns" id="columns">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__step">COLUMNS</p>
+        <h2 class="section__title">혈당, 더 깊게 보기</h2>
+        <p class="section__desc">광고·협찬 없이 논문과 성분표만 해부한 연구소 칼럼이에요.</p>
+      </div>
+      <div class="columns" id="columnGrid"></div>
+      <a class="columns__all" href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">
+        팩트체크 건강연구소 칼럼 전체 보기
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <div class="block" style="margin-top:32px">
+        <div class="block__head"><h3 class="block__title">🧰 함께 쓰면 좋은 체크기</h3></div>
+        <div class="tool-links">
+          <a class="tool-link" href="https://hjh7085-bit.github.io/metabolic-calc/">
+            <span class="tool-link__icon" aria-hidden="true">🔥</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">웹툴 3호</span>
+              <span class="tool-link__title">단식·운동 대사 정체기 진단기</span>
+              <span class="tool-link__meta">BMR·TDEE·단백질·운동 처방</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/factcheck-lab/">
+            <span class="tool-link__icon" aria-hidden="true">💊</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">웹툴 1호</span>
+              <span class="tool-link__title">마운자로 · 영양제 중복 체크기</span>
+              <span class="tool-link__meta">겹침·흡수 경쟁·복용 시간표</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tool-link" href="https://hjh7085-bit.github.io/link/">
+            <span class="tool-link__icon" aria-hidden="true">🔗</span>
+            <span class="tool-link__body">
+              <span class="tool-link__num">허브</span>
+              <span class="tool-link__title">체크기 · 칼럼 · SNS 한 번에</span>
+              <span class="tool-link__meta">팩트체크 건강연구소 링크</span>
+            </span>
+            <svg class="tool-link__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <p class="section__step">FAQ</p>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>공복혈당과 당화혈색소 중 무엇이 더 정확한가요?</summary>
+          <p>둘은 <b>보는 기간이 다릅니다</b>. 공복혈당은 그날의 상태(전날 식사·수면·스트레스)에 흔들리고, 당화혈색소는 최근 2~3개월 평균을 반영해요. 그래서 대한당뇨병학회도 공복혈당만으로 판단하지 말고 당화혈색소를 함께 보도록 권합니다. 두 수치가 크게 어긋나면 빈혈·혈색소 이상·급격한 혈당 변화를 의심해 정밀검사가 필요합니다.</p>
+        </details>
+        <details>
+          <summary>당화혈색소 6.0%면 당뇨인가요?</summary>
+          <p>아니요. <b>5.7~6.4%는 당뇨병전단계</b>(당뇨 고위험군)이고, 6.5% 이상이 당뇨병 진단 기준입니다. 다만 진단은 같은 검사를 반복하거나 다른 기준을 함께 확인해 확진해요. 전단계라도 <b>5~7% 감량과 주 150분 운동</b>으로 당뇨 발생 위험을 크게 낮출 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>TG/HDL 비율이 높으면 인슐린 저항성인가요?</summary>
+          <p><b>참고 지표일 뿐 진단이 아닙니다.</b> 중성지방이 높고 HDL이 낮은 조합은 인슐린 저항성과 관련이 깊지만, 컷오프 값이 연구마다 2.0~4.0으로 다르고 인종·성별 차이도 커요. 확진은 공복 인슐린·HOMA-IR이나 의사의 판단이 필요합니다.</p>
+        </details>
+        <details>
+          <summary>식후 15분 걷기가 정말 혈당에 도움이 되나요?</summary>
+          <p>식후 근육이 포도당을 가져다 쓰기 때문에 <b>식후 걷기</b>는 식전이나 몇 시간 뒤 걷기보다 식후 혈당 상승폭을 줄이는 데 효과적이라는 연구가 여러 건 있습니다. 식사 후 15~30분 이내에 10~20분 걷는 방식이 가장 실천하기 쉬워요. 약을 쓰는 경우 저혈당이 올 수 있으니 식후 혈당을 확인하며 하세요.</p>
+        </details>
+        <details>
+          <summary>이 수치로 약을 조절해도 되나요?</summary>
+          <p>절대 안 됩니다. 이 체크기는 공개된 기준과 환산식을 정리한 <b>참고 도구</b>입니다. 인슐린·경구혈당강하제의 용량 변경은 저혈당 위험이 있어 반드시 처방 의사와 상담해야 합니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--lab">
+    <div class="container container--narrow lab">
+      <div class="lab__badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.6 17a3 3 0 0 0 2.7 4.4h7.4A3 3 0 0 0 18.4 17L14 8.2V3"/><path d="M7.2 14h9.6"/></svg>
+      </div>
+      <div>
+        <h2>팩트체크 건강연구소는</h2>
+        <p>광고·협찬을 받지 않고, 공개된 논문과 진료지침만 해부합니다. 직접 겪은 감량 기록도 함께 올려요. 이 체크기의 기준과 환산식도 학회 지침·논문에 근거해 만들었고, 새 지침이 나오면 계속 고칩니다.</p>
+        <div class="lab__links">
+          <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">네이버 블로그</a>
+          <a href="https://www.instagram.com/factcheck_denny/" target="_blank" rel="noopener">인스타그램</a>
+          <a href="https://www.threads.com/@factcheck_denny" target="_blank" rel="noopener">스레드</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <strong>팩트체크 건강연구소</strong>
+      <p>문헌 기반 참고용이며, 질환의 진단·치료를 대신하지 않습니다.</p>
+    </div>
+    <div class="site-footer__meta">
+      <nav class="site-footer__links" aria-label="사이트 정보"><a href="../link/">웹툴 60종</a><a href="../about.html">소개</a><a href="../privacy.html">개인정보처리방침</a></nav>
+      <p>© <span id="year">2026</span> Fact-check Health Lab · 무료 웹툴</p>
+      <p class="site-footer__notice">본 페이지는 의료 행위가 아닌 정보 제공 도구입니다. 응급 상황에서는 119 또는 가까운 응급실을 이용하세요.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

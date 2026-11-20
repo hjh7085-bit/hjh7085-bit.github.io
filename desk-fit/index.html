@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X31CRTZ0RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X31CRTZ0RG');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>내 키에 맞는 의자·책상·모니터 높이 계산기(cm) | 팩트체크 건강연구소</title>
+<meta name="description" content="키(cm)만 넣으면 인체측정 비율로 권장 의자 좌판 높이, 책상 상판 높이, 모니터 상단 눈높이, 좌판 깊이, 스탠딩 데스크 높이를 cm로 계산합니다. 팔꿈치·무릎 90도 세팅 순서까지.">
+<meta name="theme-color" content="#081426">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="canonical" href="./">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hjh7085-bit.github.io/desk-fit/">
+<meta property="og:site_name" content="팩트체크 건강연구소">
+<meta property="og:title" content="내 키에 맞는 의자·책상·모니터 높이 계산기">
+<meta property="og:description" content="키만 넣으면 좌판·책상·모니터·좌판 깊이·스탠딩 높이를 cm 단위로. 팔꿈치 90도 세팅 순서 포함.">
+<meta property="og:image" content="https://hjh7085-bit.github.io/desk-fit/assets/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="내 키에 맞는 의자·책상·모니터 높이 계산기">
+<meta name="twitter:description" content="175cm면 좌판 43 · 책상 73 · 모니터 상단 123 — 내 키로 바로 계산.">
+<meta name="twitter:image" content="https://hjh7085-bit.github.io/desk-fit/assets/og-image.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "내 키에 맞는 의자·책상·모니터 높이 계산기",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "ko",
+  "description": "신장 대비 인체측정 비율로 의자 좌판 높이·책상 상판 높이·모니터 눈높이·좌판 깊이·스탠딩 데스크 높이를 계산하는 무료 웹툴.",
+  "publisher": { "@type": "Organization", "name": "팩트체크 건강연구소" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+}
+</script>
+</head>
+<body data-tool="desk" class="has-bar">
+<a class="skip-link" href="#tool">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="https://hjh7085-bit.github.io/link/" aria-label="팩트체크 건강연구소">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/><path d="M17 3v4M15 5h4"/>
+        </svg>
+      </span>
+      <span class="brand__text"><strong>팩트체크 건강연구소</strong><small>Fact-check Health Lab</small></span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#tool">치수 계산</a>
+      <a href="#order">세팅 순서</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="https://hjh7085-bit.github.io/link/">웹툴 모음</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow"><span class="dot"></span>웹툴 11호 · 데스크 셋업</p>
+      <h1 class="hero__title">내 키로 맞추는<br><em>책상 · 의자 · 모니터</em></h1>
+      <p class="hero__sub">목·어깨가 아픈 이유는 자세보다 <b>높이</b>일 때가 많습니다. 신장 비율로 <b>좌판·책상·모니터 상단·좌판 깊이</b>를 cm 단위로 계산하고, <b>팔꿈치·무릎 90도</b>에 맞추는 순서를 알려드려요.</p>
+      <div class="hero__meta">
+        <span class="pill">인체측정 비율 기반</span>
+        <span class="pill">발판 있음/없음</span>
+        <span class="pill">스탠딩 높이까지</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool" id="tool">
+    <div class="container tool__grid">
+
+      <div class="tool__col">
+        <div class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">📏</span>
+            <span class="card__title">내 몸 치수를 넣어주세요</span>
+            <span class="card__note" id="bmiNote">—</span>
+          </div>
+
+          <div class="fgrid">
+            <div class="field field--full">
+              <label class="field__label" for="height">키 <span class="opt">cm</span></label>
+              <div class="input-wrap">
+                <input class="input" id="height" type="number" inputmode="numeric" min="130" max="215" step="1" value="175" placeholder="예: 175">
+                <span class="input__unit">cm</span>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label">책상 종류</label>
+              <div class="seg" role="group" aria-label="책상 종류" id="deskSeg">
+                <button class="seg__btn is-on" type="button" data-desk="fixed" aria-pressed="true">고정 책상</button>
+                <button class="seg__btn" type="button" data-desk="adjust" aria-pressed="false">높이 조절</button>
+              </div>
+            </div>
+            <div class="field field--full" id="deskNowWrap">
+              <label class="field__label" for="deskNow">지금 쓰는 책상 높이 <span class="opt">선택 · cm</span></label>
+              <div class="input-wrap">
+                <input class="input" id="deskNow" type="number" inputmode="decimal" min="50" max="120" step="0.5" placeholder="예: 75 (모르면 비워두세요)">
+                <span class="input__unit">cm</span>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label">앉는 자세</label>
+              <div class="seg" role="group" aria-label="앉는 자세" id="postureSeg">
+                <button class="seg__btn is-on" type="button" data-posture="upright" aria-pressed="true">등 펴고 앉음</button>
+                <button class="seg__btn" type="button" data-posture="recline" aria-pressed="false">등받이 기대는 편</button>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label">발받침</label>
+              <div class="seg" role="group" aria-label="발받침 여부" id="footSeg">
+                <button class="seg__btn is-on" type="button" data-foot="none" aria-pressed="true">없음 (발이 바닥)</button>
+                <button class="seg__btn" type="button" data-foot="use" aria-pressed="false">발판 사용</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="field__hint mt-8">키만 있으면 됩니다. 신발(2cm)을 포함한 키로 계산합니다. 키가 130~215cm를 벗어나면 계산하지 않습니다.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">📐</span>
+            <span class="card__title">계산 기준 비율</span>
+          </div>
+          <div class="kv">
+            <div class="kv__row"><span class="kv__k">의자 좌판 높이</span><span class="kv__v">키 × 0.246</span></div>
+            <div class="kv__row"><span class="kv__k">책상 상판 높이</span><span class="kv__v">좌판 + 키 × 0.17</span></div>
+            <div class="kv__row"><span class="kv__k">모니터 상단</span><span class="kv__v">좌판 + 키 × 0.455</span></div>
+            <div class="kv__row"><span class="kv__k">좌판 깊이</span><span class="kv__v">키 × 0.23</span></div>
+            <div class="kv__row"><span class="kv__k">스탠딩 데스크</span><span class="kv__v">키 × 0.63</span></div>
+          </div>
+          <p class="field__hint mt-8">한국인 인체치수조사·인체공학 문헌의 신장 대비 비율(오금 높이·앉은팔꿈치 높이·앉은눈높이)을 평균값으로 옮긴 근사식입니다. 개인 다리 길이에 따라 ±2~3cm 차이가 납니다.</p>
+        </div>
+
+        <div class="card" style="background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))">
+          <div class="card__head"><span class="card__icon" aria-hidden="true">🪑</span><span class="card__title">순서가 반대면 안 됩니다</span></div>
+          <p class="field__hint" style="margin:0">의자 높이를 먼저 맞추고 → 그다음 책상·발판 → 마지막에 모니터입니다. 책상에 몸을 맞추면 어깨가 올라가고, 모니터에 목을 맞추면 거북목이 됩니다.</p>
+        </div>
+      </div>
+
+      <div class="tool__col tool__col--result">
+        <div id="result" class="result" aria-live="polite"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="order">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Setup order</p>
+        <h2 class="section__title">4단계로 맞추면 90도가 나옵니다</h2>
+        <p class="section__lead">계산값은 '목표 숫자'입니다. 실제 세팅은 아래 순서로, 위에서 아래로 내려오세요.</p>
+      </div>
+      <div class="card">
+        <div class="tips">
+          <div class="tip"><span class="tip__n">1</span><span class="tip__text"><b>좌판 높이 먼저.</b> 발바닥이 바닥(또는 발판)에 완전히 닿고, 무릎이 90~100도가 되는 높이. 허벅지 뒤가 눌리면 좌판이 높은 것입니다.</span></div>
+          <div class="tip"><span class="tip__n">2</span><span class="tip__text"><b>좌판 깊이·등받이.</b> 무릎 뒤 오금과 좌판 앞끝 사이에 <b>손가락 2~3개(3~5cm)</b>가 들어가야 합니다. 등받이는 허리(요추)를 받치고 각도 100~110도.</span></div>
+          <div class="tip"><span class="tip__n">3</span><span class="tip__text"><b>책상·발판.</b> 어깨를 힘 빼고 팔을 내렸을 때 팔꿈치가 90~110도, 손목이 꺾이지 않게. 책상이 높으면 <b>발판 + 좌판 상승</b>으로 맞추고, 낮으면 책상 다리 받침으로 올리세요.</span></div>
+          <div class="tip"><span class="tip__n">4</span><span class="tip__text"><b>모니터는 마지막.</b> 상단이 눈높이거나 살짝 아래(5cm 이내), 거리는 팔을 뻗어 손끝이 화면에 닿는 정도. 화면은 창과 직각으로 두어 역광을 피하세요.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Checklist</p>
+        <h2 class="section__title">높이가 맞았는지 30초 확인</h2>
+      </div>
+      <div class="card">
+        <div class="tips">
+          <div class="tip"><span class="tip__n">✓</span><span class="tip__text">앉았을 때 <b>어깨가 귀에서 떨어져</b> 있고, 팔꿈치가 몸통 옆에 붙어 있는가</span></div>
+          <div class="tip"><span class="tip__n">✓</span><span class="tip__text">손목이 <b>위아래로 꺾이지 않고</b> 키보드에 평평하게 놓이는가</span></div>
+          <div class="tip"><span class="tip__n">✓</span><span class="tip__text">1시간 앉아도 <b>허벅지 저림·종아리 압박</b>이 없는가 (좌판 압력)</span></div>
+          <div class="tip"><span class="tip__n">✓</span><span class="tip__text">모니터를 볼 때 <b>턱을 들거나 내리지 않는가</b> (상단이 눈높이)</span></div>
+          <div class="tip"><span class="tip__n">✓</span><span class="tip__text">50분마다 <b>일어나 3분 걷기</b>가 가능한 배치인가 — 높이보다 이게 더 중요합니다</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">FAQ</p>
+        <h2 class="section__title">책상 높이, 이런 게 궁금합니다</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>책상이 너무 높아서 어깨가 아픕니다. 어떻게 하나요?</summary>
+          <div class="faq__body"><b>발판을 쓰고 좌판을 올리는 것</b>이 정답입니다. 좌판을 올리면 팔꿈치가 책상 높이에 맞고, 들린 발은 발판이 받칩니다. 발판 높이는 (실제 책상 높이 − 권장 책상 높이) 정도로 잡으세요. 책상 다리를 자르는 것보다 안전합니다.</div>
+        </details>
+        <details>
+          <summary>모니터는 눈높이보다 위가 좋나요, 아래가 좋나요?</summary>
+          <div class="faq__body">화면 <b>상단이 눈높이 또는 5cm 아래</b>가 기준입니다. 화면을 볼 때 시선이 10~15도 아래로 향하면 목 뒤 근육 긴장이 줄어듭니다. 모니터를 높이 올려 올려다보는 배치는 목 통증을 키웁니다.</div>
+        </details>
+        <details>
+          <summary>스탠딩 데스크는 얼마나 서서 써야 하나요?</summary>
+          <div class="faq__body">서서 쓰는 시간은 하루 <b>1~2시간</b>, 30분 단위로 나눠 쓰는 것이 현실적입니다. 팔꿈치 높이(키 × 0.63)에 상판을 맞추고, 한 발은 낮은 발판에 올려 두면 허리 부담이 줄어듭니다. 서 있는 것만으로는 칼로리 소모가 크게 늘지 않으니 <b>짧은 걷기</b>를 같이 넣으세요.</div>
+        </details>
+        <details>
+          <summary>의자 좌판이 너무 깊어 무릎 뒤가 눌립니다.</summary>
+          <div class="faq__body">오금과 좌판 앞끝 사이가 3~5cm 비어야 혈액 순환이 유지됩니다. 좌판 깊이 조절이 안 되면 <b>허리 쿠션을 등 뒤에 대서</b> 몸을 앞으로 밀어내는 방법이 가장 간단합니다. 그래도 부족하면 좌판 앞쪽에 쿠션을 받쳐 다리 압박을 줄이세요.</div>
+        </details>
+        <details>
+          <summary>키가 190cm가 넘는데 일반 책상(72cm)은 너무 낮습니다.</summary>
+          <div class="faq__body">키 190cm 기준 권장 책상은 <b>80cm 안팎</b>입니다. 고정 책상이라면 <b>책상 상판 받침(리프트)</b>이나 높이조절 다리로 올리는 편이 낫고, 그 상태에서 좌판도 함께 올려야 무릎이 굽지 않습니다. 두 값을 같이 올리지 않으면 어깨만 올라갑니다.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="stack">
+        <p class="disclaimer"><b>의학적 면책 안내</b> — 이 계산기는 평균 인체측정 비율로 권장 치수를 제시하는 <b>참고용 도구</b>입니다. 다리 길이·몸통 비율은 개인차가 크고, 실제 가구의 좌판·상판 두께와 쿠션에 따라 체감 높이는 달라집니다. 목·어깨·허리 통증이 2주 이상 지속되거나 팔 저림이 있으면 정형외과·재활의학과 진료를 받으세요.</p>
+        <div class="sources">
+          <ul>
+            <li>국가기술표준원 한국인 인체치수조사(Size Korea) — 앉은오금높이·앉은팔꿈치높이·앉은눈높이 항목</li>
+            <li>Pheasant &amp; Haslegrave, Bodyspace: Anthropometry, Ergonomics and the Design of Work — 신장 대비 신체 분절 비율</li>
+            <li>인체공학 가구 지침: 좌판 높이 = 오금 높이, 좌판 깊이 = 엉덩이-오금 길이 이하</li>
+            <li>VDT 작업환경 지침 — 모니터 상단 눈높이·시선 하향 10~15도, 시거리 40cm 이상</li>
+          </ul>
+          <p class="sources__note">자료 확인일 2026-11-15. 비율 계수는 평균값이며 ±2~3cm 오차를 전제로 사용하세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="actionbar">
+  <div class="actionbar__inner">
+    <button class="btn btn--primary btn--lg" type="button" id="calcBar">내 치수 계산하기</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand"><strong>팩트체크 건강연구소</strong><small>Fact-check Health Lab · 웹툴 11호</small></div>
+    <p class="site-footer__notice">인체측정 평균 비율로 계산한 참고용 치수입니다. 통증이 지속되면 의료기관에서 진료받으세요.</p>
+    <nav class="site-footer__links" aria-label="관련 링크">
+      <a href="https://hjh7085-bit.github.io/link/">웹툴 모음</a>
+      <a href="https://hjh7085-bit.github.io/knee-load/">무릎 부하</a>
+      <a href="https://hjh7085-bit.github.io/metabolic-calc/">대사 진단</a>
+      <a href="https://hjh7085-bit.github.io/zone2-hr/">Zone 2 심박수</a>
+      <a href="https://blog.naver.com/hjh7085" target="_blank" rel="noopener">블로그</a>
+      <a href="https://www.threads.net/@factcheck_denny" target="_blank" rel="noopener">스레드</a>
+      <a href="https://www.instagram.com/factcheck_denny/" target="_blank" rel="noopener">인스타</a>
+    
+      <a href="../about.html">소개</a>
+      <a href="../privacy.html">개인정보</a>
+    </nav>
+    <p class="site-footer__meta">© 2026 팩트체크 건강연구소 · 기준일 2026-11-15</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
